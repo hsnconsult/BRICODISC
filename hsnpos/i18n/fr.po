@@ -1,0 +1,1441 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* hsnpos
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-04-16 15:24+0000\n"
+"PO-Revision-Date: 2020-04-16 15:24+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: hsnpos
+#. openerp-web
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#, python-format
+msgid "% discount"
+msgstr ""
+
+#. module: hsnpos
+#. openerp-web
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#, python-format
+msgid "&nbsp;"
+msgstr ""
+
+#. module: hsnpos
+#. openerp-web
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#, python-format
+msgid "-------------------REEDITION------------"
+msgstr ""
+
+#. module: hsnpos
+#. openerp-web
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#, python-format
+msgid "ABC"
+msgstr ""
+
+#. module: hsnpos
+#. openerp-web
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#, python-format
+msgid "Add a customer"
+msgstr "Ajouter un client"
+
+#. module: hsnpos
+#. openerp-web
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#, python-format
+msgid "Address"
+msgstr "Adresse"
+
+#. module: hsnpos
+#: model_terms:ir.ui.view,arch_db:hsnpos.iwel_articletmp_form
+msgid "Article"
+msgstr ""
+
+#. module: hsnpos
+#: model:ir.model,name:hsnpos.model_iwel_articletmp
+msgid "Articles"
+msgstr ""
+
+#. module: hsnpos
+#. openerp-web
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#, python-format
+msgid "Back"
+msgstr "Retour"
+
+#. module: hsnpos
+#. openerp-web
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#, python-format
+msgid "Backspace"
+msgstr "Retour arrière"
+
+#. module: hsnpos
+#. openerp-web
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#, python-format
+msgid "Barcode"
+msgstr "Code-barres"
+
+#. module: hsnpos
+#. openerp-web
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#, python-format
+msgid "Barcode Scanner"
+msgstr "Scanner de code barre"
+
+#. module: hsnpos
+#. openerp-web
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#, python-format
+msgid "CAISSE : 02"
+msgstr ""
+
+#. module: hsnpos
+#. openerp-web
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#, python-format
+msgid "CHANGE"
+msgstr ""
+
+#. module: hsnpos
+#. openerp-web
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#, python-format
+msgid "Cancel"
+msgstr "Annuler"
+
+#. module: hsnpos
+#. openerp-web
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#, python-format
+msgid "Category"
+msgstr "Catégorie"
+
+#. module: hsnpos
+#. openerp-web
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#, python-format
+msgid "Change"
+msgstr ""
+
+#. module: hsnpos
+#. openerp-web
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#, python-format
+msgid "Change:"
+msgstr ""
+
+#. module: hsnpos
+#. openerp-web
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#, python-format
+msgid "City"
+msgstr ""
+
+#. module: hsnpos
+#. openerp-web
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#, python-format
+msgid "Client Screen Connected"
+msgstr "Écran client connecté"
+
+#. module: hsnpos
+#. openerp-web
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#, python-format
+msgid "Client Screen Disconnected"
+msgstr "Écran client déconnecté"
+
+#. module: hsnpos
+#. openerp-web
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#, python-format
+msgid "Client Screen Warning"
+msgstr "Avertissement d'écran client"
+
+#. module: hsnpos
+#. openerp-web
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#, python-format
+msgid "Confirm"
+msgstr ""
+
+#. module: hsnpos
+#. openerp-web
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#, python-format
+msgid "Connecting to Proxy"
+msgstr "Connexion au proxy"
+
+#. module: hsnpos
+#. openerp-web
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#, python-format
+msgid "Country"
+msgstr "Pays"
+
+#. module: hsnpos
+#: model:ir.model.fields,field_description:hsnpos.field_iwel_articletmp__create_uid
+msgid "Created by"
+msgstr "Créé par"
+
+#. module: hsnpos
+#: model:ir.model.fields,field_description:hsnpos.field_iwel_articletmp__create_date
+msgid "Created on"
+msgstr "Créé le"
+
+#. module: hsnpos
+#. openerp-web
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#, python-format
+msgid "Customer"
+msgstr "Client"
+
+#. module: hsnpos
+#. openerp-web
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#, python-format
+msgid "DONT TVA"
+msgstr ""
+
+#. module: hsnpos
+#. openerp-web
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#, python-format
+msgid "Debug Window"
+msgstr "Fenêtre de debug"
+
+#. module: hsnpos
+#. openerp-web
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#, python-format
+msgid "Delete"
+msgstr "Supprimer"
+
+#. module: hsnpos
+#. openerp-web
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#, python-format
+msgid "Delete Paid Orders"
+msgstr "Supprimer les commandes payées"
+
+#. module: hsnpos
+#. openerp-web
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#, python-format
+msgid "Delete Unpaid Orders"
+msgstr "Supprimer les commandes non payées"
+
+#. module: hsnpos
+#. openerp-web
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#, python-format
+msgid "Delete order"
+msgstr "Supprimer une commande"
+
+#. module: hsnpos
+#. openerp-web
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#, python-format
+msgid "Disc"
+msgstr "Rem."
+
+#. module: hsnpos
+#. openerp-web
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#, python-format
+msgid "Discount:"
+msgstr "Remise:"
+
+#. module: hsnpos
+#. openerp-web
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#, python-format
+msgid "Discounts"
+msgstr "Remises"
+
+#. module: hsnpos
+#. openerp-web
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#, python-format
+msgid "Dismiss"
+msgstr "Rejeter"
+
+#. module: hsnpos
+#: model:ir.model.fields,field_description:hsnpos.field_iwel_articletmp__display_name
+msgid "Display Name"
+msgstr "Afficher Nom"
+
+#. module: hsnpos
+#. openerp-web
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#, python-format
+msgid "Download"
+msgstr "Télécharger"
+
+#. module: hsnpos
+#. openerp-web
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#, python-format
+msgid "Download Paid Orders"
+msgstr "Télécharger des commandes payées"
+
+#. module: hsnpos
+#. openerp-web
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#, python-format
+msgid "Download Unpaid Orders"
+msgstr "Télécharger des commandes non payées"
+
+#. module: hsnpos
+#. openerp-web
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#, python-format
+msgid "Download error"
+msgstr "Télécharger les erreurs"
+
+#. module: hsnpos
+#. openerp-web
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#, python-format
+msgid "Due"
+msgstr "Dûe"
+
+#. module: hsnpos
+#. openerp-web
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#, python-format
+msgid "Edit"
+msgstr "Éditer"
+
+#. module: hsnpos
+#. openerp-web
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#, python-format
+msgid "Electronic Scale"
+msgstr "Vente électronique"
+
+#. module: hsnpos
+#. openerp-web
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#, python-format
+msgid "Email"
+msgstr "Courriel"
+
+#. module: hsnpos
+#. openerp-web
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#, python-format
+msgid "Equivalence en USD ("
+msgstr ""
+
+#. module: hsnpos
+#. openerp-web
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#, python-format
+msgid "Export Paid Orders"
+msgstr "Exporter les commandes payées"
+
+#. module: hsnpos
+#. openerp-web
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#, python-format
+msgid "Export Unpaid Orders"
+msgstr "Exporter les commandes non payées"
+
+#. module: hsnpos
+#. openerp-web
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#, python-format
+msgid "Finished Importing Orders"
+msgstr "Commandes d'importations terminées"
+
+#. module: hsnpos
+#. openerp-web
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#, python-format
+msgid "Hardware Events"
+msgstr "Événements matériels"
+
+#. module: hsnpos
+#. openerp-web
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#, python-format
+msgid "Hardware Status"
+msgstr "Status matériels"
+
+#. module: hsnpos
+#. openerp-web
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#, python-format
+msgid "Home"
+msgstr "Acceuil"
+
+#. module: hsnpos
+#: model:ir.model.fields,field_description:hsnpos.field_iwel_articletmp__id
+msgid "ID"
+msgstr ""
+
+#. module: hsnpos
+#. openerp-web
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#, python-format
+msgid "IDENT.:"
+msgstr ""
+
+#. module: hsnpos
+#. openerp-web
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#, python-format
+msgid "Import Orders"
+msgstr "Importer des commandes"
+
+#. module: hsnpos
+#. openerp-web
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#, python-format
+msgid "Invalid product lot"
+msgstr "Lot d'article invalide"
+
+#. module: hsnpos
+#. openerp-web
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#, python-format
+msgid "Invoice"
+msgstr "Facture"
+
+#. module: hsnpos
+#. openerp-web
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#, python-format
+msgid "LE"
+msgstr ""
+
+#. module: hsnpos
+#: model:ir.model.fields,field_description:hsnpos.field_iwel_articletmp____last_update
+msgid "Last Modified on"
+msgstr "Dernière modification le"
+
+#. module: hsnpos
+#: model:ir.model.fields,field_description:hsnpos.field_iwel_articletmp__write_uid
+msgid "Last Updated by"
+msgstr "Dernière mise à jour par"
+
+#. module: hsnpos
+#: model:ir.model.fields,field_description:hsnpos.field_iwel_articletmp__write_date
+msgid "Last Updated on"
+msgstr "Dernière mise à jour le"
+
+#. module: hsnpos
+#. openerp-web
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#, python-format
+msgid "Loading"
+msgstr "Chargement"
+
+#. module: hsnpos
+#. openerp-web
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#, python-format
+msgid "Logo"
+msgstr ""
+
+#. module: hsnpos
+#. openerp-web
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#, python-format
+msgid "Method"
+msgstr "Méthode"
+
+#. module: hsnpos
+#. openerp-web
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#, python-format
+msgid "Montant"
+msgstr ""
+
+#. module: hsnpos
+#. openerp-web
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#, python-format
+msgid "N/A"
+msgstr ""
+
+#. module: hsnpos
+#. openerp-web
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#, python-format
+msgid "Name"
+msgstr "Nom"
+
+#. module: hsnpos
+#. openerp-web
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#, python-format
+msgid "New order"
+msgstr "Nouvelle commande"
+
+#. module: hsnpos
+#. openerp-web
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#, python-format
+msgid "Next Order"
+msgstr "Prochaine commande"
+
+#. module: hsnpos
+#. openerp-web
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#, python-format
+msgid "None"
+msgstr "Aucun"
+
+#. module: hsnpos
+#. openerp-web
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#, python-format
+msgid "Odoo V.12"
+msgstr ""
+
+#. module: hsnpos
+#. openerp-web
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#, python-format
+msgid "Ok"
+msgstr ""
+
+#. module: hsnpos
+#. openerp-web
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#, python-format
+msgid "Open Cashbox"
+msgstr "Ouvrir la caisse"
+
+#. module: hsnpos
+#. openerp-web
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#, python-format
+msgid "Order"
+msgstr "Commande"
+
+#. module: hsnpos
+#. openerp-web
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#, python-format
+msgid "Orders"
+msgstr "Commandes"
+
+#. module: hsnpos
+#. openerp-web
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#, python-format
+msgid "PU"
+msgstr ""
+
+#. module: hsnpos
+#. openerp-web
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#, python-format
+msgid "Partner"
+msgstr "Partenaire"
+
+#. module: hsnpos
+#. openerp-web
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#, python-format
+msgid "Partner logo"
+msgstr "Logo du partenaire"
+
+#. module: hsnpos
+#. openerp-web
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#, python-format
+msgid "Pay"
+msgstr "Payer"
+
+#. module: hsnpos
+#. openerp-web
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#, python-format
+msgid "Payment"
+msgstr "Paiement"
+
+#. module: hsnpos
+#. openerp-web
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#, python-format
+msgid "Payments:"
+msgstr "Paiements"
+
+#. module: hsnpos
+#. openerp-web
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#, python-format
+msgid "Phone"
+msgstr "Téléphone"
+
+#. module: hsnpos
+#. openerp-web
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#, python-format
+msgid "Picture"
+msgstr ""
+
+#. module: hsnpos
+#. openerp-web
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#, python-format
+msgid "Please select a payment method."
+msgstr "Veuillez choisir un moyen de paiement."
+
+#. module: hsnpos
+#. openerp-web
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#, python-format
+msgid "Postcode"
+msgstr "Code postal"
+
+#. module: hsnpos
+#. openerp-web
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#, python-format
+msgid "Price"
+msgstr "Prix"
+
+#. module: hsnpos
+#. openerp-web
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#, python-format
+msgid "Price list"
+msgstr "Liste de prix"
+
+#. module: hsnpos
+#. openerp-web
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#, python-format
+msgid "Pricelist"
+msgstr "Liste de prix"
+
+#. module: hsnpos
+#. openerp-web
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#, python-format
+msgid "Print"
+msgstr "Imprimer"
+
+#. module: hsnpos
+#. openerp-web
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#, python-format
+msgid "Print Invoice"
+msgstr "Imprimer facture"
+
+#. module: hsnpos
+#. openerp-web
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#, python-format
+msgid "Print Receipt"
+msgstr "Imprimer reçu"
+
+#. module: hsnpos
+#: model:ir.model,name:hsnpos.model_product_product
+msgid "Product"
+msgstr "Article"
+
+#. module: hsnpos
+#. openerp-web
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#, python-format
+msgid "Product image"
+msgstr "Image article"
+
+#. module: hsnpos
+#. openerp-web
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#, python-format
+msgid "Proxy Connected"
+msgstr "Proxy connecté"
+
+#. module: hsnpos
+#. openerp-web
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#, python-format
+msgid "Proxy Disconnected"
+msgstr "Proxy déconnecté"
+
+#. module: hsnpos
+#. openerp-web
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#, python-format
+msgid "Proxy Warning"
+msgstr "Avertissement de proxy"
+
+#. module: hsnpos
+#. openerp-web
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#, python-format
+msgid "QTE"
+msgstr ""
+
+#. module: hsnpos
+#. openerp-web
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#, python-format
+msgid "Qty"
+msgstr "Qté"
+
+#. module: hsnpos
+#. openerp-web
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#, python-format
+msgid "RENDU EN ESPECES :"
+msgstr ""
+
+#. module: hsnpos
+#. openerp-web
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#, python-format
+msgid "Read Weighing Scale"
+msgstr "Lire la balance"
+
+#. module: hsnpos
+#. openerp-web
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#, python-format
+msgid "Refresh Display"
+msgstr "Actualiser l'affichage"
+
+#. module: hsnpos
+#. openerp-web
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#, python-format
+msgid "Remise:"
+msgstr ""
+
+#. module: hsnpos
+#. openerp-web
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#, python-format
+msgid "Remove"
+msgstr "Supprimer"
+
+#. module: hsnpos
+#. openerp-web
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#, python-format
+msgid "Reset"
+msgstr "Réinitialiser"
+
+#. module: hsnpos
+#. openerp-web
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#, python-format
+msgid "Save"
+msgstr "Sauvegarder"
+
+#. module: hsnpos
+#. openerp-web
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#, python-format
+msgid "Scan"
+msgstr "Scan"
+
+#. module: hsnpos
+#. openerp-web
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#, python-format
+msgid "Scan EAN-13"
+msgstr ""
+
+#. module: hsnpos
+#. openerp-web
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#, python-format
+msgid "Search Customers"
+msgstr "Chercher Clients"
+
+#. module: hsnpos
+#. openerp-web
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#, python-format
+msgid "Search Products"
+msgstr "Chercher Articles"
+
+#. module: hsnpos
+#. openerp-web
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#, python-format
+msgid "Select Customer"
+msgstr "Choisir client"
+
+#. module: hsnpos
+#. openerp-web
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#, python-format
+msgid "Send by email"
+msgstr "Envoyer un email"
+
+#. module: hsnpos
+#. openerp-web
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#, python-format
+msgid "Serial/Lot Number"
+msgstr "Numéro de série / lot"
+
+#. module: hsnpos
+#. openerp-web
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#, python-format
+msgid "Served by"
+msgstr "Servi par"
+
+#. module: hsnpos
+#. openerp-web
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#, python-format
+msgid "Session ids:"
+msgstr ""
+
+#. module: hsnpos
+#. openerp-web
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#, python-format
+msgid "Set Weight"
+msgstr "Définir le poids"
+
+#. module: hsnpos
+#. openerp-web
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#, python-format
+msgid "Set fiscal position"
+msgstr "Définir la position fiscale"
+
+#. module: hsnpos
+#. openerp-web
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#, python-format
+msgid "Shopping cart"
+msgstr "Panier"
+
+#. module: hsnpos
+#. openerp-web
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#, python-format
+msgid "Skip"
+msgstr "Passer"
+
+#. module: hsnpos
+#. openerp-web
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#, python-format
+msgid "Slash"
+msgstr "Sabrer"
+
+#. module: hsnpos
+#. openerp-web
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#, python-format
+msgid "Street"
+msgstr ""
+
+#. module: hsnpos
+#. openerp-web
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#, python-format
+msgid "Subtotal"
+msgstr ""
+
+#. module: hsnpos
+#. openerp-web
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#, python-format
+msgid "Successfully  imported"
+msgstr "Importé avec succès"
+
+#. module: hsnpos
+#. openerp-web
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#, python-format
+msgid "Successfully imported"
+msgstr "Importé avec succès"
+
+#. module: hsnpos
+#. openerp-web
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#, python-format
+msgid "Synchronisation Connected"
+msgstr "Synchronisation connectée"
+
+#. module: hsnpos
+#. openerp-web
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#, python-format
+msgid "Synchronisation Connecting"
+msgstr "Connection de la synchronisation"
+
+#. module: hsnpos
+#. openerp-web
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#, python-format
+msgid "Synchronisation Disconnected"
+msgstr "Déconnexion de la synchronisation"
+
+#. module: hsnpos
+#. openerp-web
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#, python-format
+msgid "Synchronisation Error"
+msgstr "Erreur de synchronisation"
+
+#. module: hsnpos
+#. openerp-web
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#, python-format
+msgid "TICKET:"
+msgstr ""
+
+#. module: hsnpos
+#. openerp-web
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#, python-format
+msgid "TOTAL"
+msgstr ""
+
+#. module: hsnpos
+#. openerp-web
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#, python-format
+msgid "TOTAL A PAYER"
+msgstr ""
+
+#. module: hsnpos
+#. openerp-web
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#, python-format
+msgid "TOTAL TTC"
+msgstr ""
+
+#. module: hsnpos
+#. openerp-web
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#, python-format
+msgid "Tax ID"
+msgstr ""
+
+#. module: hsnpos
+#. openerp-web
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#, python-format
+msgid "Taxes:"
+msgstr ""
+
+#. module: hsnpos
+#. openerp-web
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#, python-format
+msgid "Tel:"
+msgstr ""
+
+#. module: hsnpos
+#. openerp-web
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#, python-format
+msgid "Tendered"
+msgstr ""
+
+#. module: hsnpos
+#. openerp-web
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#, python-format
+msgid ""
+"The Point of Sale could not find any product, client, employee\n"
+"                    or action associated with the scanned barcode."
+"Le point de vente n'a trouvé aucun produit, client, employé \n"
+"                    ou action associée au code-barres scanné."
+
+#. module: hsnpos
+#. openerp-web
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#, python-format
+msgid ""
+"There are pending operations that could not be saved into the database, are "
+"you sure you want to exit?"
+msgstr ""
+"Des opérations en attente n'ont pas pu être enregistrées dans la base de "
+"données. Voulez-vous vraiment quitter?"
+
+#. module: hsnpos
+#. openerp-web
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#, python-format
+msgid "Tip"
+msgstr ""
+
+#. module: hsnpos
+#. openerp-web
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#, python-format
+msgid "Total Taxes"
+msgstr ""
+
+#. module: hsnpos
+#. openerp-web
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#, python-format
+msgid "Total:"
+msgstr ""
+
+#. module: hsnpos
+#. openerp-web
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#, python-format
+msgid "Undo"
+msgstr "Annuler"
+
+#. module: hsnpos
+#. openerp-web
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#, python-format
+msgid "Unknown Barcode"
+msgstr "Code barre inconnu"
+
+#. module: hsnpos
+#. openerp-web
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#, python-format
+msgid "VAT:"
+msgstr ""
+
+#. module: hsnpos
+#. openerp-web
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#, python-format
+msgid "Valid product lot"
+msgstr "Lot d'article valide"
+
+#. module: hsnpos
+#. openerp-web
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#, python-format
+msgid "Validate"
+msgstr "Valider"
+
+#. module: hsnpos
+#. openerp-web
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#, python-format
+msgid "Weighing"
+msgstr "Pesée"
+
+#. module: hsnpos
+#. openerp-web
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#, python-format
+msgid "With a"
+msgstr "Avec un"
+
+#. module: hsnpos
+#. openerp-web
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#, python-format
+msgid "Your shopping cart is empty"
+msgstr "Votre panier est vide"
+
+#. module: hsnpos
+#. openerp-web
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#, python-format
+msgid "ZIP"
+msgstr ""
+
+#. module: hsnpos
+#. openerp-web
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#, python-format
+msgid "at"
+msgstr "à"
+
+#. module: hsnpos
+#. openerp-web
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#, python-format
+msgid "belong to another session:"
+msgstr ""
+
+#. module: hsnpos
+#: model:ir.model.fields,field_description:hsnpos.field_iwel_articletmp__c1
+msgid "c1"
+msgstr ""
+
+#. module: hsnpos
+#: model:ir.model.fields,field_description:hsnpos.field_iwel_articletmp__c10
+msgid "c10"
+msgstr ""
+
+#. module: hsnpos
+#: model:ir.model.fields,field_description:hsnpos.field_iwel_articletmp__c11
+msgid "c11"
+msgstr ""
+
+#. module: hsnpos
+#: model:ir.model.fields,field_description:hsnpos.field_iwel_articletmp__c12
+msgid "c12"
+msgstr ""
+
+#. module: hsnpos
+#: model:ir.model.fields,field_description:hsnpos.field_iwel_articletmp__c13
+msgid "c13"
+msgstr ""
+
+#. module: hsnpos
+#: model:ir.model.fields,field_description:hsnpos.field_iwel_articletmp__c14
+msgid "c14"
+msgstr ""
+
+#. module: hsnpos
+#: model:ir.model.fields,field_description:hsnpos.field_iwel_articletmp__c15
+msgid "c15"
+msgstr ""
+
+#. module: hsnpos
+#: model:ir.model.fields,field_description:hsnpos.field_iwel_articletmp__c16
+msgid "c16"
+msgstr ""
+
+#. module: hsnpos
+#: model:ir.model.fields,field_description:hsnpos.field_iwel_articletmp__c17
+msgid "c17"
+msgstr ""
+
+#. module: hsnpos
+#: model:ir.model.fields,field_description:hsnpos.field_iwel_articletmp__c18
+msgid "c18"
+msgstr ""
+
+#. module: hsnpos
+#: model:ir.model.fields,field_description:hsnpos.field_iwel_articletmp__c19
+msgid "c19"
+msgstr ""
+
+#. module: hsnpos
+#: model:ir.model.fields,field_description:hsnpos.field_iwel_articletmp__c2
+msgid "c2"
+msgstr ""
+
+#. module: hsnpos
+#: model:ir.model.fields,field_description:hsnpos.field_iwel_articletmp__c20
+msgid "c20"
+msgstr ""
+
+#. module: hsnpos
+#: model:ir.model.fields,field_description:hsnpos.field_iwel_articletmp__c21
+msgid "c21"
+msgstr ""
+
+#. module: hsnpos
+#: model:ir.model.fields,field_description:hsnpos.field_iwel_articletmp__c22
+msgid "c22"
+msgstr ""
+
+#. module: hsnpos
+#: model:ir.model.fields,field_description:hsnpos.field_iwel_articletmp__c23
+msgid "c23"
+msgstr ""
+
+#. module: hsnpos
+#: model:ir.model.fields,field_description:hsnpos.field_iwel_articletmp__c24
+msgid "c24"
+msgstr ""
+
+#. module: hsnpos
+#: model:ir.model.fields,field_description:hsnpos.field_iwel_articletmp__c25
+msgid "c25"
+msgstr ""
+
+#. module: hsnpos
+#: model:ir.model.fields,field_description:hsnpos.field_iwel_articletmp__c26
+msgid "c26"
+msgstr ""
+
+#. module: hsnpos
+#: model:ir.model.fields,field_description:hsnpos.field_iwel_articletmp__c27
+msgid "c27"
+msgstr ""
+
+#. module: hsnpos
+#: model:ir.model.fields,field_description:hsnpos.field_iwel_articletmp__c28
+msgid "c28"
+msgstr ""
+
+#. module: hsnpos
+#: model:ir.model.fields,field_description:hsnpos.field_iwel_articletmp__c29
+msgid "c29"
+msgstr ""
+
+#. module: hsnpos
+#: model:ir.model.fields,field_description:hsnpos.field_iwel_articletmp__c3
+msgid "c3"
+msgstr ""
+
+#. module: hsnpos
+#: model:ir.model.fields,field_description:hsnpos.field_iwel_articletmp__c30
+msgid "c30"
+msgstr ""
+
+#. module: hsnpos
+#: model:ir.model.fields,field_description:hsnpos.field_iwel_articletmp__c31
+msgid "c31"
+msgstr ""
+
+#. module: hsnpos
+#: model:ir.model.fields,field_description:hsnpos.field_iwel_articletmp__c32
+msgid "c32"
+msgstr ""
+
+#. module: hsnpos
+#: model:ir.model.fields,field_description:hsnpos.field_iwel_articletmp__c33
+msgid "c33"
+msgstr ""
+
+#. module: hsnpos
+#: model:ir.model.fields,field_description:hsnpos.field_iwel_articletmp__c34
+msgid "c34"
+msgstr ""
+
+#. module: hsnpos
+#: model:ir.model.fields,field_description:hsnpos.field_iwel_articletmp__c35
+msgid "c35"
+msgstr ""
+
+#. module: hsnpos
+#: model:ir.model.fields,field_description:hsnpos.field_iwel_articletmp__c36
+msgid "c36"
+msgstr ""
+
+#. module: hsnpos
+#: model:ir.model.fields,field_description:hsnpos.field_iwel_articletmp__c37
+msgid "c37"
+msgstr ""
+
+#. module: hsnpos
+#: model:ir.model.fields,field_description:hsnpos.field_iwel_articletmp__c38
+msgid "c38"
+msgstr ""
+
+#. module: hsnpos
+#: model:ir.model.fields,field_description:hsnpos.field_iwel_articletmp__c39
+msgid "c39"
+msgstr ""
+
+#. module: hsnpos
+#: model:ir.model.fields,field_description:hsnpos.field_iwel_articletmp__c4
+msgid "c4"
+msgstr ""
+
+#. module: hsnpos
+#: model:ir.model.fields,field_description:hsnpos.field_iwel_articletmp__c40
+msgid "c40"
+msgstr ""
+
+#. module: hsnpos
+#: model:ir.model.fields,field_description:hsnpos.field_iwel_articletmp__c41
+msgid "c41"
+msgstr ""
+
+#. module: hsnpos
+#: model:ir.model.fields,field_description:hsnpos.field_iwel_articletmp__c42
+msgid "c42"
+msgstr ""
+
+#. module: hsnpos
+#: model:ir.model.fields,field_description:hsnpos.field_iwel_articletmp__c43
+msgid "c43"
+msgstr ""
+
+#. module: hsnpos
+#: model:ir.model.fields,field_description:hsnpos.field_iwel_articletmp__c44
+msgid "c44"
+msgstr ""
+
+#. module: hsnpos
+#: model:ir.model.fields,field_description:hsnpos.field_iwel_articletmp__c45
+msgid "c45"
+msgstr ""
+
+#. module: hsnpos
+#: model:ir.model.fields,field_description:hsnpos.field_iwel_articletmp__c46
+msgid "c46"
+msgstr ""
+
+#. module: hsnpos
+#: model:ir.model.fields,field_description:hsnpos.field_iwel_articletmp__c5
+msgid "c5"
+msgstr ""
+
+#. module: hsnpos
+#: model:ir.model.fields,field_description:hsnpos.field_iwel_articletmp__c6
+msgid "c6"
+msgstr ""
+
+#. module: hsnpos
+#: model:ir.model.fields,field_description:hsnpos.field_iwel_articletmp__c7
+msgid "c7"
+msgstr ""
+
+#. module: hsnpos
+#: model:ir.model.fields,field_description:hsnpos.field_iwel_articletmp__c8
+msgid "c8"
+msgstr ""
+
+#. module: hsnpos
+#: model:ir.model.fields,field_description:hsnpos.field_iwel_articletmp__c9
+msgid "c9"
+msgstr ""
+
+#. module: hsnpos
+#. openerp-web
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#, python-format
+msgid "caps lock"
+msgstr "verrouillage des majuscules"
+
+#. module: hsnpos
+#. openerp-web
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#, python-format
+msgid "close"
+msgstr "fermer"
+
+#. module: hsnpos
+#. openerp-web
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#, python-format
+msgid "delete"
+msgstr "fermer"
+
+#. module: hsnpos
+#. openerp-web
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#, python-format
+msgid "discount"
+msgstr "remise"
+
+#. module: hsnpos
+#: model:ir.model.fields,field_description:hsnpos.field_product_product__ligne_gencod
+msgid "gencode"
+msgstr "Gencode"
+
+#. module: hsnpos
+#. openerp-web
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#, python-format
+msgid "paid orders"
+msgstr "commandes payées"
+
+#. module: hsnpos
+#. openerp-web
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#, python-format
+msgid "return"
+msgstr "retour"
+
+#. module: hsnpos
+#. openerp-web
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#, python-format
+msgid "shift"
+msgstr ""
+
+#. module: hsnpos
+#. openerp-web
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#, python-format
+msgid "tab"
+msgstr ""
+
+#. module: hsnpos
+#. openerp-web
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#, python-format
+msgid "unpaid orders"
+msgstr "commande impayées"
+
+#. module: hsnpos
+#. openerp-web
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#, python-format
+msgid "unpaid orders could not be imported"
+msgstr "les commandes impayées ne peuvent pas être importées"
+
+#. module: hsnpos
+#. openerp-web
+#: code:addons/hsnpos/static/src/xml/pos.xml:0
+#, python-format
+msgid "were duplicates of existing orders"
+msgstr "étaient des doublons de commandes existantes"
