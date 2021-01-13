@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+		 	<record id="dashbord_templatestock_form" model="ir.ui.view">
+	         <field name="name">dashbord.templatestock.form</field>
+             <field name="model">dashbord.templatestock</field>
+             <field name="arch" type="xml">
+	         <form string="dashbords">
+                      <sheet>
+                      <group>
+                        <group>
+							<field name="name" />
+							<field name="lst_price" />
+							<field name="default_code" />
+							<field name="barcode" />
+							<field name="qty_available" />
+							<field name="uom_id" />
+							<field name="dashstate" />
+                        </group>
+                      </group>
+
+                    </sheet>
+                </form>
+			</field>
+	     </record> 
+		 
+        <record id="dashbord_templatestock_tree" model="ir.ui.view">
+	         <field name="name">dashbord.templatestock.tree</field>
+             <field name="model">dashbord.templatestock</field>
+             <field name="arch" type="xml">
+	         <tree string="dashbords">
+							<field name="name" />
+							<field name="lst_price" />
+							<field name="default_code" />
+							<field name="barcode" />
+							<field name="qty_available" />
+							<field name="uom_id" />
+							<field name="dashstate" />
+
+                </tree>
+			</field>
+	     </record>
+		 <record id="dashbord_templatestock_search" model="ir.ui.view">
+	         <field name="name">dashbord.templatestock.search</field>
+             <field name="model">dashbord.templatestock</field>
+             <field name="arch" type="xml">
+	         <tree string="dashbords">
+							<field name="name"/>
+                </tree>
+			</field>
+	     </record>
+
+ <record model="ir.actions.act_window" id="action_dashbord_templatestock">
+      <field name="name">STOCKS DASHBORD</field>
+      <field name="type">ir.actions.act_window</field>
+      <field name="res_model">dashbord.templatestock</field>
+      <field name="view_mode">tree,form</field>
+      <field name="view_id" ref="dashbord_templatestock_tree"/>
+      <field name="help" type="html">
+        <p class="oe_view_nocontent_create">
+          Cliquer ici pour ajouter un templatestock
+        </p>
+      </field>
+    </record>
+
+		 	<record id="dashbord_fonction_form" model="ir.ui.view">
+	         <field name="name">dashbord.fonction.form</field>
+             <field name="model">dashbord.fonction</field>
+             <field name="arch" type="xml">
+	         <form string="dashbords">
+                      <header>
+                        <button name="asolder" string ="A Solder" type="object" class="btn-primary"/>
+                      </header>
+                      <sheet>
+                      <group>
+                        <group>
+							<field name="name" />
+                        </group>
+                      </group>
+
+                    </sheet>
+                </form>
+			</field>
+	     </record> 
+		 
+        <record id="dashbord_fonction_tree" model="ir.ui.view">
+	         <field name="name">dashbord.fonction.tree</field>
+             <field name="model">dashbord.fonction</field>
+             <field name="arch" type="xml">
+	         <tree string="dashbords">
+							<field name="name" />
+
+                </tree>
+			</field>
+	     </record>
+		 <record id="dashbord_fonction_search" model="ir.ui.view">
+	         <field name="name">dashbord.fonction.search</field>
+             <field name="model">dashbord.fonction</field>
+             <field name="arch" type="xml">
+	         <tree string="dashbords">
+							<field name="name"/>
+                </tree>
+			</field>
+	     </record>
+
+ <record model="ir.actions.act_window" id="action_dashbord_fonction">
+      <field name="name">FONCTIONS DASHBORD</field>
+      <field name="type">ir.actions.act_window</field>
+      <field name="res_model">dashbord.fonction</field>
+      <field name="view_mode">tree,form</field>
+      <field name="view_id" ref="dashbord_fonction_tree"/>
+      <field name="help" type="html">
+        <p class="oe_view_nocontent_create">
+          Cliquer ici pour ajouter une fonction
+        </p>
+      </field>
+    </record>
+	    </data>
+</odoo>
