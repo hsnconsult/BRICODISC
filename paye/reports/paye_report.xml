@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- QWeb Reports -->
+        <report
+                id="action_report_bulletin"
+                model="hr.payslip"
+                string="Bulletin de paie"
+                report_type="qweb-pdf"
+                name="paye.report_bulletin"
+                file="paye.report_bulletin"
+        />
+        <report
+                id="action_report_fiche"
+                model="hr.payslip.run"
+                string="Fiche Imputation"
+                report_type="qweb-pdf"
+                name="paye.report_fiche"
+                file="paye.report_fiche"
+        />
+        <report
+                id="action_report_rubrique"
+                model="hr.payslip.run"
+                string="Etat paie"
+                report_type="qweb-pdf"
+                name="paye.report_rubrique"
+                file="paye.report_rubrique"
+        />
+        <report
+                id="action_report_cnss"
+                model="hr.payslip.run"
+                string="Etat CNSS"
+                report_type="qweb-pdf"
+                name="paye.report_cnss"
+                file="paye.report_cnss"
+        />
+        <report
+                id="action_report_its"
+                model="hr.payslip.run"
+                string="Etat ITS"
+                report_type="qweb-pdf"
+                name="paye.report_its"
+                file="paye.report_its"
+        />
+        <report
+                id="action_report_salarie"
+                model="hr.payslip.run"
+                string="Etat Salaires"
+                report_type="qweb-pdf"
+                name="paye.report_salarie"
+                file="paye.report_salarie"
+        />
+    </data>
+</odoo>
