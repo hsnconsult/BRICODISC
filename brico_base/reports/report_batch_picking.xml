@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template inherit_id="stock_picking_batch.report_picking_batch" id="inherit_report_batch_picking">
+
+            <xpath expr="//h3" position="before">
+                <div class="row justify-content-end mb16">
+                    <div class="col-4" name="right_box">
+                        <img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('Code128', o.name, 600, 100)"
+                             style="width:300px;height:50px;" alt="Barcode"/>
+                    </div>
+                </div>
+            </xpath>
+            <xpath expr="//p" position="inside">
+                <div class="row justify-content-end mb16" t-if="move_line_ids">
+                    <div class="col-4" name="right_box">
+                        <img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('Code128', o.name, 600, 100)"
+                             style="width:300px;height:50px;" alt="Barcode"/>
+                    </div>
+                </div>
+            </xpath>
+        </template>
+    </data>
+</odoo>

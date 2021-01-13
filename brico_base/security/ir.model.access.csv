@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_brico_base_brico_base,brico_base.brico_base,model_brico_base_brico_base,,1,0,0,0

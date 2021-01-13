@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="0">
+        <record id="batch_to_confirm_activity" model="mail.activity.type">
+            <field name="name">A Batch picking to done</field>
+            <field name="icon">fa-thumbs-up</field>
+            <field name="res_model_id" ref="stock_picking_batch.model_stock_picking_batch"/>
+        </record>
+    </data>
+</odoo>
