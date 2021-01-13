@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="kzm_stock_deliveryslip_name" inherit_id="stock.report_delivery_document">
+        <xpath expr="//t[@t-set='o']" position="before">
+            <br/>
+            <br/>
+            <br/>
+            <center>
+                <div style='background-color:#FFD9F2;' class="d-inline-flex p-2 border border-info">
+                    <div style="text-transform: uppercase;font-weight:bold;"
+                         t-if="o.picking_type_id.code == 'outgoing'">
+                        Bon de livraison (Livraison + Retour fournisseur)
+                    </div>
+                    <div style="text-transform: uppercase;font-weight:bold;"
+                         t-if="o.picking_type_id.code == 'incoming'">
+                        Bon de réception (Réception + Retour Client)
+                    </div>
+                </div>
+            </center>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+        </xpath>
+    </template>
+    <template id="kzm_stock_picking_name" inherit_id="stock.report_picking">
+        <xpath expr="//div[hasclass('row','justify-content-end','mb16')]" position="before">
+            <!--        <xpath expr="//div[@name='right_box']/ancestor::store" position="before">-->
+            <center>
+                <div class="d-inline-flex p-2 border border-info">
+                    <div style="text-transform: uppercase;font-weight:bold;"
+                         t-if="o.picking_type_id.code == 'incoming'">
+                        Bon de préparation: (Réception + Retour Client)
+                    </div>
+                    <div style="text-transform: uppercase;font-weight:bold;"
+                         t-if="o.picking_type_id.code == 'outgoing'">
+                        Bon de préparation: (Livraison + Retour fournisseur)
+                    </div>
+                </div>
+            </center>
+            <br/>
+            <br/>
+        </xpath>
+
+    </template>
+    <template id="kzm_stock_picking_operation_reports" inherit_id="stock.report_picking_type_label">
+        <xpath expr="//td[@name='td_pt_barcode']" position="attributes">
+            <attribute name="style">text-align: center; vertical-align: middle; height: 3cm; width: 15cm;</attribute>
+        </xpath>
+        <xpath expr="//img" position="attributes">
+            <attribute name="style">height: 2cm; width: 14cm;</attribute>
+        </xpath>
+        <xpath expr="//table" position="after">
+            <br/>
+            <br/>
+        </xpath>
+        <xpath expr="//div[hasclass('page')]" position="inside">
+            <t t-if="(o_index+1)%3 == 0">
+                <p style="page-break-after:always;"/>
+            </t>
+        </xpath>
+    </template>
+
+</odoo>

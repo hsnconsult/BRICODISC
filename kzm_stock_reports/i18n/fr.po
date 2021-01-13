@@ -1,0 +1,684 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* kzm_panob_portal
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-08-06 16:55+0000\n"
+"PO-Revision-Date: 2020-08-06 16:55+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: kzm_panob_portal
+#: model:ir.model.fields,help:kzm_panob_portal.field_panob_check_request__state
+msgid ""
+"* New: When the request is created and not yet confirmed.\n"
+"* Supported: This state can be seen when a request is waiting to be manufactured.\n"
+"* Manufacturing: This state is reached when the request is being manufactured.\n"
+"* Ready for delivery: When requests are manufactured and need to be delivered, it is set to 'Ready for delivery'.\n"
+"* In the agency: When the shipment is processed, the state is 'In the agency'.\n"
+"* Canceled: When the shipment is canceled, the state is 'Canceled'."
+msgstr ""
+"* Nouveau: lorsque la demande est créée et n'est pas encore confirmée. \n"
+"* Pris en charge: cet état est visible lorsqu'une demande est en attente de fabrication. \n"
+"* Fabrication: cet état est atteint lorsque la demande est en cours de fabrication. \n"
+"* Prêt pour la livraison: lorsque les demandes sont fabriquées et doivent être livrées, il est défini sur 'Prêt pour la livraison' . \n"
+"* Dans l'agence: lorsque l'envoi est traité, l'état est' Dans l'agence '.\n"
+"* Annulé: lorsque l'envoi est annulé, l'état est 'Annulé'."
+
+#. module: kzm_panob_portal
+#: model_terms:ir.ui.view,arch_db:kzm_panob_portal.portal_my_home_request_check
+msgid "/kzm_panob_portal/static/description/icon.png"
+msgstr ""
+
+#. module: kzm_panob_portal
+#: model_terms:ir.ui.view,arch_db:kzm_panob_portal.new_invoice_portal_docs
+msgid "/kzm_panob_portal/static/description/icon_invoice.png"
+msgstr ""
+
+#. module: kzm_panob_portal
+#: model_terms:ir.ui.view,arch_db:kzm_panob_portal.new_order_portal_docs
+msgid "/kzm_panob_portal/static/description/icon_order.png"
+msgstr ""
+
+#. module: kzm_panob_portal
+#: model_terms:ir.ui.view,arch_db:kzm_panob_portal.request_submited
+msgid ""
+"<i class=\"fa fa-check-circle fa-2x text-success\" role=\"img\" aria-"
+"label=\"Success\" title=\"Success\"/>"
+msgstr ""
+
+#. module: kzm_panob_portal
+#: model_terms:ir.ui.view,arch_db:kzm_panob_portal.portal_request_page
+msgid "<small class=\"text-right\">Status:</small>"
+msgstr ""
+
+#. module: kzm_panob_portal
+#: model_terms:ir.ui.view,arch_db:kzm_panob_portal.portal_request_page
+msgid "<strong class=\"col-lg-6\">Adresse Client</strong>"
+msgstr ""
+
+#. module: kzm_panob_portal
+#: model_terms:ir.ui.view,arch_db:kzm_panob_portal.portal_request_page
+msgid "<strong class=\"col-lg-6\">Check type</strong>"
+msgstr "<strong class=\"col-lg-6\">Type de chéquier</strong>"
+
+#. module: kzm_panob_portal
+#: model_terms:ir.ui.view,arch_db:kzm_panob_portal.portal_request_page
+msgid "<strong class=\"col-lg-6\">Format</strong>"
+msgstr ""
+
+#. module: kzm_panob_portal
+#: model_terms:ir.ui.view,arch_db:kzm_panob_portal.portal_request_page
+msgid "<strong class=\"col-lg-6\">Modes de livraison</strong>"
+msgstr ""
+
+#. module: kzm_panob_portal
+#: model_terms:ir.ui.view,arch_db:kzm_panob_portal.portal_request_page
+msgid "<strong class=\"col-lg-6\">Nombre de chèque</strong>"
+msgstr ""
+
+#. module: kzm_panob_portal
+#: model_terms:ir.ui.view,arch_db:kzm_panob_portal.portal_request_page
+msgid "<strong class=\"col-lg-6\">Numero de compte</strong>"
+msgstr ""
+
+#. module: kzm_panob_portal
+#: model:ir.model.fields,field_description:kzm_panob_portal.field_panob_check_request__message_needaction
+msgid "Action Needed"
+msgstr "Action nécessaire"
+
+#. module: kzm_panob_portal
+#: model:ir.model.fields,field_description:kzm_panob_portal.field_panob_check_request__activity_ids
+msgid "Activities"
+msgstr "Activités"
+
+#. module: kzm_panob_portal
+#: model:ir.model.fields,field_description:kzm_panob_portal.field_panob_check_request__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "Décoration d'exception d'activité"
+
+#. module: kzm_panob_portal
+#: model:ir.model.fields,field_description:kzm_panob_portal.field_panob_check_request__activity_state
+msgid "Activity State"
+msgstr "État de l'activité"
+
+#. module: kzm_panob_portal
+#: model:ir.model.fields,field_description:kzm_panob_portal.field_panob_check_request__client_bank_adress_id
+#: model_terms:ir.ui.view,arch_db:kzm_panob_portal.kzm_panob_portal_form
+msgid "Adresse Client"
+msgstr "Adresse du client"
+
+#. module: kzm_panob_portal
+#: model:ir.model.fields,field_description:kzm_panob_portal.field_panob_check_request__message_attachment_count
+msgid "Attachment Count"
+msgstr "Nombre de pièces jointes"
+
+#. module: kzm_panob_portal
+#: model:ir.model.fields,field_description:kzm_panob_portal.field_panob_check_request__bank_id
+msgid "Bank"
+msgstr "Banque"
+
+#. module: kzm_panob_portal
+#: model_terms:ir.ui.view,arch_db:kzm_panob_portal.portal_request_page
+msgid "Cancel"
+msgstr "Annuler"
+
+#. module: kzm_panob_portal
+#: model:ir.model.fields.selection,name:kzm_panob_portal.selection__panob_check_request__state__canceled
+msgid "Canceled"
+msgstr "Annulé"
+
+#. module: kzm_panob_portal
+#: code:addons/kzm_panob_portal/models/demande.py:0
+#: code:addons/kzm_panob_portal/models/demande.py:0
+#, python-format
+msgid "Check Ending Sequence : "
+msgstr "Vérifier la séquence de fin :"
+
+#. module: kzm_panob_portal
+#: model:ir.model.fields,field_description:kzm_panob_portal.field_sale_order_line__format_check_file_name
+msgid "Check Format Name"
+msgstr "Vérifier le nom du format"
+
+#. module: kzm_panob_portal
+#: code:addons/kzm_panob_portal/models/demande.py:0
+#: code:addons/kzm_panob_portal/models/demande.py:0
+#, python-format
+msgid "Check Option : "
+msgstr "Option de chèque :"
+
+#. module: kzm_panob_portal
+#: model_terms:ir.ui.view,arch_db:kzm_panob_portal.portal_my_home_request_check
+msgid "Check Request"
+msgstr "Vérifier la demande"
+
+#. module: kzm_panob_portal
+#: model:ir.model,name:kzm_panob_portal.model_panob_check_request
+msgid "Check Request Model"
+msgstr "Vérifier le modèle de demande"
+
+#. module: kzm_panob_portal
+#: model:ir.actions.server,name:kzm_panob_portal.ir_cron_scheduler_request_check_action_ir_actions_server
+#: model:ir.cron,cron_name:kzm_panob_portal.ir_cron_scheduler_request_check_action
+#: model:ir.cron,name:kzm_panob_portal.ir_cron_scheduler_request_check_action
+msgid "Check Request scheduler"
+msgstr "Vérifier le planificateur de demandes"
+
+#. module: kzm_panob_portal
+#: model_terms:ir.ui.view,arch_db:kzm_panob_portal.portal_layout
+msgid "Check Requests"
+msgstr "Vérifier les demandes"
+
+#. module: kzm_panob_portal
+#: code:addons/kzm_panob_portal/models/demande.py:0
+#: code:addons/kzm_panob_portal/models/demande.py:0
+#, python-format
+msgid "Check Start Sequence : "
+msgstr "Séquence de début de chèque"
+
+#. module: kzm_panob_portal
+#: model:ir.model.fields,field_description:kzm_panob_portal.field_panob_check_request__chequier_type_id
+#: model_terms:ir.ui.view,arch_db:kzm_panob_portal.portal_my_requests
+#: model_terms:ir.ui.view,arch_db:kzm_panob_portal.request_content
+#: model_terms:ir.ui.view,arch_db:kzm_panob_portal.request_content_edit
+msgid "Check Type"
+msgstr "Type de chéquier"
+
+#. module: kzm_panob_portal
+#: model_terms:ir.ui.view,arch_db:kzm_panob_portal.request_content
+#: model_terms:ir.ui.view,arch_db:kzm_panob_portal.request_content_edit
+msgid "Choose an adress"
+msgstr "Choisissez une adresse"
+
+#. module: kzm_panob_portal
+#: model:ir.model.fields,field_description:kzm_panob_portal.field_panob_check_request__city
+msgid "City"
+msgstr "Ville"
+
+#. module: kzm_panob_portal
+#: model_terms:ir.ui.view,arch_db:kzm_panob_portal.request_content
+#: model_terms:ir.ui.view,arch_db:kzm_panob_portal.request_content_edit
+msgid "Client Adress"
+msgstr "Adresse du client"
+
+#. module: kzm_panob_portal
+#: model:ir.model.fields,field_description:kzm_panob_portal.field_panob_check_request__order_id
+msgid "Commande"
+msgstr "Commande"
+
+#. module: kzm_panob_portal
+#: model:ir.model.fields,field_description:kzm_panob_portal.field_panob_check_request__order_line_id
+msgid "Commande Line"
+msgstr "Ligne de commande"
+
+#. module: kzm_panob_portal
+#: model:ir.model.fields,field_description:kzm_panob_portal.field_panob_check_request__country
+msgid "Country"
+msgstr "Pays"
+
+#. module: kzm_panob_portal
+#: model:ir.model.fields,field_description:kzm_panob_portal.field_panob_check_request__create_uid
+msgid "Created by"
+msgstr "Créé par"
+
+#. module: kzm_panob_portal
+#: model:ir.model.fields,field_description:kzm_panob_portal.field_panob_check_request__create_date
+msgid "Created on"
+msgstr "Créé le"
+
+#. module: kzm_panob_portal
+#: model_terms:ir.ui.view,arch_db:kzm_panob_portal.request_submit
+msgid "Date :"
+msgstr "Date :"
+
+#. module: kzm_panob_portal
+#: model_terms:ir.ui.view,arch_db:kzm_panob_portal.request_content
+#: model_terms:ir.ui.view,arch_db:kzm_panob_portal.request_content_edit
+msgid "Delivery methods"
+msgstr "Modes de livraison"
+
+#. module: kzm_panob_portal
+#: model_terms:ir.ui.view,arch_db:kzm_panob_portal.portal_my_requests
+msgid "Demand Date"
+msgstr "Date de la demande"
+
+#. module: kzm_panob_portal
+#: model:ir.model.fields,field_description:kzm_panob_portal.field_panob_check_request__demand_date
+msgid "Demand date"
+msgstr "Date de la demande"
+
+#. module: kzm_panob_portal
+#: model:ir.actions.act_window,name:kzm_panob_portal.check_request
+#: model:ir.ui.menu,name:kzm_panob_portal.menu_root
+#: model:ir.ui.menu,name:kzm_panob_portal.request_check
+msgid "Demandes de chéquier"
+msgstr ""
+
+#. module: kzm_panob_portal
+#: model:ir.model.fields,field_description:kzm_panob_portal.field_panob_check_request__display_name
+msgid "Display Name"
+msgstr "Nom affiché"
+
+#. module: kzm_panob_portal
+#: model_terms:ir.ui.view,arch_db:kzm_panob_portal.request_edit
+msgid "Edit Request"
+msgstr "Modifier la demande"
+
+#. module: kzm_panob_portal
+#: model:ir.model.fields.selection,name:kzm_panob_portal.selection__panob_check_request__mode_livraison__agence
+#: model_terms:ir.ui.view,arch_db:kzm_panob_portal.request_content
+#: model_terms:ir.ui.view,arch_db:kzm_panob_portal.request_content_edit
+msgid "En agence"
+msgstr ""
+
+#. module: kzm_panob_portal
+#: model:ir.model.fields,field_description:kzm_panob_portal.field_panob_check_request__fin_sequence
+msgid "End Sequence"
+msgstr ""
+
+#. module: kzm_panob_portal
+#: model:ir.model.fields,field_description:kzm_panob_portal.field_panob_check_request__filename
+msgid "Filename"
+msgstr "Nom de fichier"
+
+#. module: kzm_panob_portal
+#: model:ir.model.fields,field_description:kzm_panob_portal.field_panob_check_request__message_follower_ids
+msgid "Followers"
+msgstr "Abonnés"
+
+#. module: kzm_panob_portal
+#: model:ir.model.fields,field_description:kzm_panob_portal.field_panob_check_request__message_channel_ids
+msgid "Followers (Channels)"
+msgstr "Abonnés (canaux)"
+
+#. module: kzm_panob_portal
+#: model:ir.model.fields,field_description:kzm_panob_portal.field_panob_check_request__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "Abonnés (partenaires)"
+
+#. module: kzm_panob_portal
+#: model:ir.model.fields,field_description:kzm_panob_portal.field_panob_check_request__check_options
+#: model_terms:ir.ui.view,arch_db:kzm_panob_portal.request_content
+#: model_terms:ir.ui.view,arch_db:kzm_panob_portal.request_content_edit
+msgid "Format"
+msgstr "Format"
+
+#. module: kzm_panob_portal
+#: model:ir.model.fields,field_description:kzm_panob_portal.field_panob_check_request__format_check_file
+#: model:ir.model.fields,field_description:kzm_panob_portal.field_sale_order_line__format_check_file
+msgid "Format Check File"
+msgstr "Fichier de vérification du format"
+
+#. module: kzm_panob_portal
+#: model:ir.model.fields,field_description:kzm_panob_portal.field_panob_check_request__fullname
+#: model_terms:ir.ui.view,arch_db:kzm_panob_portal.portal_my_requests
+msgid "Full name"
+msgstr "Nom complet"
+
+#. module: kzm_panob_portal
+#: code:addons/kzm_panob_portal/models/demande.py:0
+#: code:addons/kzm_panob_portal/models/demande.py:0
+#, python-format
+msgid "Fullname : "
+msgstr "Nom complet : "
+
+#. module: kzm_panob_portal
+#: model_terms:ir.ui.view,arch_db:kzm_panob_portal.kzm_panob_portal_form
+msgid "Generate Sale Order"
+msgstr "Générer une commande de vente"
+
+#. module: kzm_panob_portal
+#: model:ir.model.fields,field_description:kzm_panob_portal.field_panob_check_request__id
+msgid "ID"
+msgstr "Id"
+
+#. module: kzm_panob_portal
+#: model:ir.model.fields,field_description:kzm_panob_portal.field_panob_check_request__activity_exception_icon
+msgid "Icon"
+msgstr "Icône"
+
+#. module: kzm_panob_portal
+#: model:ir.model.fields,help:kzm_panob_portal.field_panob_check_request__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "Icône pour indiquer une activité d'exception."
+
+#. module: kzm_panob_portal
+#: model:ir.model.fields,help:kzm_panob_portal.field_panob_check_request__message_needaction
+#: model:ir.model.fields,help:kzm_panob_portal.field_panob_check_request__message_unread
+msgid "If checked, new messages require your attention."
+msgstr "Si coché, les nouveaux messages nécessitent votre attention."
+
+#. module: kzm_panob_portal
+#: model:ir.model.fields,help:kzm_panob_portal.field_panob_check_request__message_has_error
+#: model:ir.model.fields,help:kzm_panob_portal.field_panob_check_request__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "Si coché, certains messages ont une erreur de livraison."
+
+#. module: kzm_panob_portal
+#: model:ir.model.fields.selection,name:kzm_panob_portal.selection__panob_check_request__state__in_the_agency
+#: model_terms:ir.ui.view,arch_db:kzm_panob_portal.kzm_panob_portal_view_search
+msgid "In the agency"
+msgstr "Dans l'agence"
+
+#. module: kzm_panob_portal
+#: model_terms:ir.ui.view,arch_db:kzm_panob_portal.kzm_panob_portal_form
+msgid "Invoice"
+msgstr "Facture d'achat"
+
+#. module: kzm_panob_portal
+#: model:ir.model.fields,field_description:kzm_panob_portal.field_panob_check_request__message_is_follower
+msgid "Is Follower"
+msgstr "Est un abonné"
+
+#. module: kzm_panob_portal
+#: model:ir.model.fields,field_description:kzm_panob_portal.field_panob_check_request____last_update
+msgid "Last Modified on"
+msgstr "Dernière modification le"
+
+#. module: kzm_panob_portal
+#: model:ir.model.fields,field_description:kzm_panob_portal.field_panob_check_request__write_uid
+msgid "Last Updated by"
+msgstr "Dernière mise à jour par"
+
+#. module: kzm_panob_portal
+#: model:ir.model.fields,field_description:kzm_panob_portal.field_panob_check_request__write_date
+msgid "Last Updated on"
+msgstr "Dernière mise à jour le"
+
+#. module: kzm_panob_portal
+#: model_terms:ir.ui.view,arch_db:kzm_panob_portal.new_logo_portal_docs
+msgid "Logo"
+msgstr "Logo"
+
+#. module: kzm_panob_portal
+#: model:ir.model.fields,field_description:kzm_panob_portal.field_panob_check_request__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "Pièce jointe principale"
+
+#. module: kzm_panob_portal
+#: model:ir.model.fields.selection,name:kzm_panob_portal.selection__panob_check_request__state__manufacturing
+#: model_terms:ir.ui.view,arch_db:kzm_panob_portal.kzm_panob_portal_form
+msgid "Manufacturing"
+msgstr "Fabrication"
+
+#. module: kzm_panob_portal
+#: model:ir.model.fields,field_description:kzm_panob_portal.field_panob_check_request__message_has_error
+msgid "Message Delivery error"
+msgstr "Erreur de livraison de message"
+
+#. module: kzm_panob_portal
+#: model:ir.model.fields,field_description:kzm_panob_portal.field_panob_check_request__message_ids
+msgid "Messages"
+msgstr "Messages"
+
+#. module: kzm_panob_portal
+#: model:ir.model.fields,field_description:kzm_panob_portal.field_panob_check_request__mode_livraison
+msgid "Mode de Livraison"
+msgstr "Mode de livraison"
+
+#. module: kzm_panob_portal
+#: model:ir.model.fields,field_description:kzm_panob_portal.field_panob_check_request__name
+msgid "Name of the check"
+msgstr "Nom du chèque"
+
+#. module: kzm_panob_portal
+#: code:addons/kzm_panob_portal/models/demande.py:0
+#: model:ir.model.fields.selection,name:kzm_panob_portal.selection__panob_check_request__state__new
+#: model_terms:ir.ui.view,arch_db:kzm_panob_portal.kzm_panob_portal_view_search
+#, python-format
+msgid "New"
+msgstr "Nouveau"
+
+#. module: kzm_panob_portal
+#: model:ir.model.fields,field_description:kzm_panob_portal.field_panob_check_request__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "Date limite de la prochaine activité"
+
+#. module: kzm_panob_portal
+#: model:ir.model.fields,field_description:kzm_panob_portal.field_panob_check_request__activity_summary
+msgid "Next Activity Summary"
+msgstr "Résumé de l'activité suivante"
+
+#. module: kzm_panob_portal
+#: model:ir.model.fields,field_description:kzm_panob_portal.field_panob_check_request__activity_type_id
+msgid "Next Activity Type"
+msgstr "Type de l'activité suivante"
+
+#. module: kzm_panob_portal
+#: model_terms:ir.ui.view,arch_db:kzm_panob_portal.request_content
+#: model_terms:ir.ui.view,arch_db:kzm_panob_portal.request_content_edit
+msgid "Nombre de carnet"
+msgstr ""
+
+#. module: kzm_panob_portal
+#: model:ir.model.fields,field_description:kzm_panob_portal.field_panob_check_request__qty
+msgid "Nombre de chèque"
+msgstr ""
+
+#. module: kzm_panob_portal
+#: model:ir.model.fields.selection,name:kzm_panob_portal.selection__panob_check_request__check_options__non-standard
+msgid "Non Standard"
+msgstr ""
+
+#. module: kzm_panob_portal
+#: model:ir.model.fields,field_description:kzm_panob_portal.field_panob_check_request__notes
+msgid "Notes"
+msgstr ""
+
+#. module: kzm_panob_portal
+#: model_terms:ir.ui.view,arch_db:kzm_panob_portal.request_submit
+msgid "Nouvelle commande de chèquier(s)"
+msgstr ""
+
+#. module: kzm_panob_portal
+#: model:ir.model.fields,field_description:kzm_panob_portal.field_panob_check_request__message_needaction_counter
+msgid "Number of Actions"
+msgstr "Nombre d'actions"
+
+#. module: kzm_panob_portal
+#: model:ir.model.fields,field_description:kzm_panob_portal.field_panob_check_request__message_has_error_counter
+msgid "Number of errors"
+msgstr "Nombre des erreurs"
+
+#. module: kzm_panob_portal
+#: model:ir.model.fields,help:kzm_panob_portal.field_panob_check_request__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "Nombre de messages nécessitant une action"
+
+#. module: kzm_panob_portal
+#: model:ir.model.fields,help:kzm_panob_portal.field_panob_check_request__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "Nombre de messages avec erreur de livraison"
+
+#. module: kzm_panob_portal
+#: model:ir.model.fields,help:kzm_panob_portal.field_panob_check_request__message_unread_counter
+msgid "Number of unread messages"
+msgstr "Nombre de messages non lus"
+
+#. module: kzm_panob_portal
+#: model:ir.model.fields,field_description:kzm_panob_portal.field_panob_check_request__client_compte
+#: model_terms:ir.ui.view,arch_db:kzm_panob_portal.kzm_panob_portal_form
+#: model_terms:ir.ui.view,arch_db:kzm_panob_portal.request_content
+#: model_terms:ir.ui.view,arch_db:kzm_panob_portal.request_content_edit
+msgid "Numéro de compte client"
+msgstr ""
+
+#. module: kzm_panob_portal
+#: model_terms:ir.ui.view,arch_db:kzm_panob_portal.kzm_panob_portal_form
+msgid "Order"
+msgstr "Ordre"
+
+#. module: kzm_panob_portal
+#: model:ir.model.fields.selection,name:kzm_panob_portal.selection__panob_check_request__mode_livraison__poste
+msgid "Par la poste"
+msgstr ""
+
+#. module: kzm_panob_portal
+#: model_terms:ir.ui.view,arch_db:kzm_panob_portal.kzm_panob_portal_form
+msgid "Picking"
+msgstr "Sélection"
+
+#. module: kzm_panob_portal
+#: model:ir.model,name:kzm_panob_portal.model_mrp_production
+msgid "Production Order"
+msgstr "Ordre de fabrication"
+
+#. module: kzm_panob_portal
+#: model_terms:ir.ui.view,arch_db:kzm_panob_portal.portal_my_requests
+msgid "Quantity"
+msgstr "Quantité"
+
+#. module: kzm_panob_portal
+#: model:ir.model.fields.selection,name:kzm_panob_portal.selection__panob_check_request__state__ready_for_delivery
+msgid "Ready for delivery"
+msgstr "Prêt pour la livraison"
+
+#. module: kzm_panob_portal
+#: model_terms:ir.ui.view,arch_db:kzm_panob_portal.portal_my_requests
+msgid "Reference"
+msgstr "Référence"
+
+#. module: kzm_panob_portal
+#: model:ir.model.fields,field_description:kzm_panob_portal.field_mrp_production__request_id
+msgid "Request"
+msgstr "Request"
+
+#. module: kzm_panob_portal
+#: model_terms:ir.ui.view,arch_db:kzm_panob_portal.check_request_demand_tree
+msgid "Request Check Tree"
+msgstr "Demander un arbre de contrôle"
+
+#. module: kzm_panob_portal
+#: model:ir.model.fields,field_description:kzm_panob_portal.field_panob_check_request__state
+msgid "Request status"
+msgstr "Statut de la demande"
+
+#. module: kzm_panob_portal
+#: model_terms:ir.ui.view,arch_db:kzm_panob_portal.portal_my_requests
+msgid "Requests"
+msgstr "Demandes"
+
+#. module: kzm_panob_portal
+#: model:ir.model.fields,field_description:kzm_panob_portal.field_panob_check_request__activity_user_id
+msgid "Responsible User"
+msgstr "Utilisateur responsable"
+
+#. module: kzm_panob_portal
+#: model:ir.model.fields,field_description:kzm_panob_portal.field_panob_check_request__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "Erreur de livraison SMS"
+
+#. module: kzm_panob_portal
+#: model:ir.model,name:kzm_panob_portal.model_sale_order_line
+msgid "Sales Order Line"
+msgstr "Ligne de bons de commande"
+
+#. module: kzm_panob_portal
+#: model:ir.model.fields.selection,name:kzm_panob_portal.selection__panob_check_request__check_options__standard
+#: model_terms:ir.ui.view,arch_db:kzm_panob_portal.request_content
+#: model_terms:ir.ui.view,arch_db:kzm_panob_portal.request_content_edit
+msgid "Standard"
+msgstr ""
+
+#. module: kzm_panob_portal
+#: model:ir.model.fields,field_description:kzm_panob_portal.field_panob_check_request__debut_sequence
+msgid "Start Sequence"
+msgstr "Début de la séquence"
+
+#. module: kzm_panob_portal
+#: model_terms:ir.ui.view,arch_db:kzm_panob_portal.portal_my_requests
+msgid "State"
+msgstr "Statut"
+
+#. module: kzm_panob_portal
+#: model:ir.model.fields,help:kzm_panob_portal.field_panob_check_request__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"Statut basé sur les activités \n"
+"En retard: la date d'échéance est déjà dépassée \n"
+"Aujourd'hui: la date de l'activité est aujourd'hui \n"
+"Prévu: activités futures."
+
+
+
+#. module: kzm_panob_portal
+#: model:ir.model.fields,field_description:kzm_panob_portal.field_panob_check_request__street
+msgid "Street"
+msgstr "Rue"
+
+#. module: kzm_panob_portal
+#: model_terms:ir.ui.view,arch_db:kzm_panob_portal.request_content_edit
+msgid "Submit"
+msgstr "Soumettre"
+
+#. module: kzm_panob_portal
+#: model_terms:ir.ui.view,arch_db:kzm_panob_portal.portal_my_requests
+msgid "Submit a request"
+msgstr "Soumettre une demande"
+
+#. module: kzm_panob_portal
+#: model:ir.model.fields.selection,name:kzm_panob_portal.selection__panob_check_request__state__supported
+#: model_terms:ir.ui.view,arch_db:kzm_panob_portal.kzm_panob_portal_view_search
+msgid "Supported"
+msgstr "Prise en charge"
+
+#. module: kzm_panob_portal
+#: model_terms:ir.ui.view,arch_db:kzm_panob_portal.portal_my_requests
+msgid "There are currently no requests."
+msgstr "Il n'y a actuellement aucune demande."
+
+#. module: kzm_panob_portal
+#: model:ir.model.fields,help:kzm_panob_portal.field_panob_check_request__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "Type d'activité d'exception enregistrée."
+
+#. module: kzm_panob_portal
+#: model:ir.model.fields,field_description:kzm_panob_portal.field_panob_check_request__message_unread
+msgid "Unread Messages"
+msgstr "Messages non lus"
+
+#. module: kzm_panob_portal
+#: model:ir.model.fields,field_description:kzm_panob_portal.field_panob_check_request__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "Compteur de messages non lus"
+
+#. module: kzm_panob_portal
+#: model_terms:ir.ui.view,arch_db:kzm_panob_portal.portal_request_page
+msgid "Update"
+msgstr "Mettre à jour"
+
+#. module: kzm_panob_portal
+#: model_terms:ir.ui.view,arch_db:kzm_panob_portal.request_content
+msgid "Valider et faire une nouvelle commande"
+msgstr ""
+
+#. module: kzm_panob_portal
+#: model_terms:ir.ui.view,arch_db:kzm_panob_portal.request_content
+msgid "Valider et sortir"
+msgstr ""
+
+#. module: kzm_panob_portal
+#: model:ir.model.fields,field_description:kzm_panob_portal.field_panob_check_request__website_message_ids
+msgid "Website Messages"
+msgstr "Messages du site Web"
+
+#. module: kzm_panob_portal
+#: model:ir.model.fields,help:kzm_panob_portal.field_panob_check_request__website_message_ids
+msgid "Website communication history"
+msgstr "Historique des communications sur le site Web"
+
+#. module: kzm_panob_portal
+#: model_terms:ir.ui.view,arch_db:kzm_panob_portal.request_submited
+msgid "Your check request has been created. Thank you !"
+msgstr "Votre demande de chèque a été créée. Merci !"
