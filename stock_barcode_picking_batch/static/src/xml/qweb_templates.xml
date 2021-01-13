@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+    <t t-extend="stock_barcode_lines_template">
+        <t t-jquery="div.o_barcode_line" t-operation="attributes">
+            <attribute name="class"
+                       value="o_barcode_line o_colored_markup list-group-item d-flex flex-row flex-nowrap"/>
+            <attribute name="t-att-data-picking-id"
+                       value="line &amp;&amp; line.picking_id &amp;&amp; line.picking_id.id"/>
+            <attribute name="t-att-style"
+                       value="line &amp;&amp; line.picking_id &amp;&amp; 'border-color: hsla(' + line.color_hue + ', 80%, 50%, 0.6)'"/>
+        </t>
+
+        <t t-jquery="div[name='quantity']" t-operation="after">
+            <div t-if="model == 'stock.picking.batch'">
+                <i class="fa fa-fw fa-truck"/>
+                <span class="o_picking_label" t-esc="line.picking_id.name"/>
+            </div>
+        </t>
+    </t>
+
+    <t t-extend="stock_barcode_settings_widget">
+        <t t-jquery=".o_barcode_settings" t-operation="prepend">
+            <button t-if="widget.model == 'stock.picking.batch'"
+                    class="btn-lg btn btn-dark text-uppercase o_print_picking_batch">Print Batch Transfer</button>
+        </t>
+    </t>
+
+    <t t-extend="stock_barcode_lines_widget">
+        <t t-jquery=".o_scan_message_inv_already_done" t-operation="after">
+            <span class="o_hidden o_scan_message o_scan_message_picking_batch_already_done"><span class="fa fa-exclamation-triangle"/>
+                This batch transfer is already done
+            </span>
+            <span class="o_hidden o_scan_message o_scan_message_picking_batch_already_cancelled"><span class="fa fa-exclamation-triangle"/>
+                This batch transfer is already cancelled
+            </span>
+            <span class="o_hidden o_scan_message o_scan_message_picking_batch_draft"><span class="fa fa-exclamation-triangle"/>
+                This batch transfer is still draft, it must be confirmed before being processed
+            </span>
+            <span class="o_hidden o_scan_message o_scan_message_picking_batch_empty"><span class="fa fa-exclamation-triangle"/>
+                This batch transfer is empty, you need to configure it
+            </span>
+        </t>
+    </t>
+</templates>
