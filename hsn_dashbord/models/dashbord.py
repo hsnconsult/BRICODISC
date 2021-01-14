@@ -87,5 +87,7 @@ class ProductDash(models.Model):
     lst_price = fields.Float('Prix')
     qty_available = fields.Float('Quantité')
     uom_id = fields.Char('Udm')
-    dashstate = fields.Selection([('sol1','SOL 1 PROMO'),('sol2','SOL 2 PROMO'),('sol3','SOL 3 PROMO'),('afaire','A FAIRE'),('encours','EN COURS'),('termine','TERMINE')], string='Etat DASH', size=64, default='sol1' ,track_visibility='onchange', required=True)
+    dashstate = fields.Selection([('sol1','SOL 1 PROMO'),('sol2','SOL 2 PROMO'),('sol3','SOL 3 PROMO'),('afaire','A FAIRE'),('encours','EN COURS'),('termine','TERMINE')], string='Etat DASH', size=64, default='sol1' ,track_visibility='onchange', required=True, group_expand='_expand_states')
     
+    def _expand_states(self, states, domain, order):
+        return [key for key, val in type(self).dashstate.selection]    

@@ -19,8 +19,7 @@
                                 </strong>
                                 <div name="tags"/>
                                 <ul>
-                                    <li>Prix: <field name="lst_price"></field></li>
-                                    <li>Stock: <field name="qty_available"></field></li>
+                                    <li>Prix: <field name="lst_price"></field> / Stock: <field name="qty_available"></field></li>
                                 </ul>
                                 <div name="tags"/>
                             </div>
