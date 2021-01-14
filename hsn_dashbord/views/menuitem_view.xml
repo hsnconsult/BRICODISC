@@ -2,7 +2,7 @@
 <odoo>
     <data>
 <!-- Menus  -->
-    <menuitem id="hsndashbord" name="TABLEAUX DE BORD" sequence="150" />
+    <menuitem id="hsndashbord" name="TABLEAUX DE BORD BRICO" sequence="150" web_icon="hsn_dashbord,static/description/tbord.png"/>
 	<menuitem id="hsndashbord_fonction" name="FONCTIONS" parent="hsndashbord"  sequence="5" action="action_dashbord_fonction"/>
 	<menuitem id="hsndashbord_stock" name="STOCKS" parent="hsndashbord"  sequence="10" action="action_dashbord_templatestock"/>
 	    </data>
