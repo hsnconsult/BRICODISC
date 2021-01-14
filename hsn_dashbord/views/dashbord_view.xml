@@ -5,7 +5,7 @@
         <field name="name">dashbord.templatestock.kanban</field>
         <field name="model">dashbord.templatestock</field>
         <field name="arch" type="xml">
-            <kanban default_group_by="dashstate" class="o_kanban_small_column">
+            <kanban default_group_by="dashstate" class="o_kanban_small_column" edit="false" create="false" quick_create="false">
                 <field name="id"/>
                 <field name="dashstate"/>
                 <progressbar field="dashstate" colors='{"termine": "success", "encours": "warning", "afaire": "danger"}'/>
@@ -79,10 +79,10 @@
 	     </record>
 
  <record model="ir.actions.act_window" id="action_dashbord_templatestock">
-      <field name="name">STOCKS DASHBORD</field>
+      <field name="name">PRODUITS A SOLDER RAPIDEMENT</field>
       <field name="type">ir.actions.act_window</field>
       <field name="res_model">dashbord.templatestock</field>
-      <field name="view_mode">kanban,tree,form</field>
+      <field name="view_mode">kanban</field>
       <field name="view_id" ref="hsn_dashbord.dashbord_templatestock_kanban"/>
       <field name="help" type="html">
         <p class="oe_view_nocontent_create">

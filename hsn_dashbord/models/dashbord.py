@@ -32,7 +32,8 @@ class DashFonction(models.Model):
                     'lst_price':prod.lst_price,
                     'qty_available':prod.qty_available,
                     'uom_id':prod.uom_id.name,
-                    'dashstate':'sol1'
+                    'dashstate':'sol1',
+                    'initstate':'sol1'
                     }
                   dashprod.create(vals)
                   
@@ -52,7 +53,8 @@ class DashFonction(models.Model):
                     'lst_price':prod.lst_price,
                     'qty_available':prod.qty_available,
                     'uom_id':prod.uom_id.name,
-                    'dashstate':'sol2'
+                    'dashstate':'sol2',
+                    'initstate':'sol2'
                     }
                   dashprod.create(vals)        
     name = fields.Char('Nom')
@@ -72,9 +74,11 @@ class DashFonction(models.Model):
                     'lst_price':prod.lst_price,
                     'qty_available':prod.qty_available,
                     'uom_id':prod.uom_id.name,
-                    'dashstate':'sol3'
+                    'dashstate':'sol3',
+                    'initstate':'sol3'
                     }
-                  dashprod.create(vals)        
+                  dashprod.create(vals) 
+                 
     name = fields.Char('Nom')
     
 class ProductDash(models.Model):
@@ -87,7 +91,18 @@ class ProductDash(models.Model):
     lst_price = fields.Float('Prix')
     qty_available = fields.Float('Quantité')
     uom_id = fields.Char('Udm')
+    initstate = fields.Selection([('sol1','SOL 1 PROMO'),('sol2','SOL 2 PROMO'),('sol3','SOL 3 PROMO')], string='Etat DEPART', size=64)
     dashstate = fields.Selection([('sol1','SOL 1 PROMO'),('sol2','SOL 2 PROMO'),('sol3','SOL 3 PROMO'),('afaire','A FAIRE'),('encours','EN COURS'),('termine','TERMINE')], string='Etat DASH', size=64, default='sol1' ,track_visibility='onchange', required=True, group_expand='_expand_states')
     
+    def write(self, values):
+        if 'dashstate' in values:
+           previous_state = self.dashstate
+           new_state = values.get('dashstate')
+           if (new_state in ['sol1','sol2','sol3'] and previous_state in ['sol1','sol2','sol3']):
+              raise ValidationError(_("Operations permises: A FAIRE, EN COURS ou TERMINE"))
+           if (new_state in ['sol1','sol2','sol3'] and new_state!=self.initstate):
+              raise ValidationError(_("Operations permises: POSITION DE DEPART"))
+        return super(ProductDash, self).write(values) 
+        
     def _expand_states(self, states, domain, order):
         return [key for key, val in type(self).dashstate.selection]    
