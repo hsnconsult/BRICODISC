@@ -70,6 +70,8 @@
 	         <form string="dashbords">
                       <header>
                         <button name="asolder" string ="A Solder" type="object" class="btn-primary"/>
+                        <button name="asolder2" string ="A Solder 2" type="object" class="btn-primary"/>
+                        <button name="asolder3" string ="A Solder 3" type="object" class="btn-primary"/>
                       </header>
                       <sheet>
                       <group>
