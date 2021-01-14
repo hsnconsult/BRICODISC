@@ -5,7 +5,7 @@
         <field name="name">dashbord.templatestock.kanban</field>
         <field name="model">dashbord.templatestock</field>
         <field name="arch" type="xml">
-            <kanban default_group_by="dashstate">
+            <kanban default_group_by="dashstate" class="o_kanban_small_column">
                 <field name="id"/>
                 <field name="dashstate"/>
                 <progressbar field="dashstate" colors='{"termine": "success", "encours": "warning", "afaire": "danger"}'/>
