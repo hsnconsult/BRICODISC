@@ -35,7 +35,46 @@ class DashFonction(models.Model):
                     'dashstate':'sol1'
                     }
                   dashprod.create(vals)
-        
+                  
+    def asolder2(self):
+        dashprod = self.env['dashbord.templatestock']
+        prods = self.env['product.template'].search([('qty_available','>',10)])
+        vendus = self.env['sale.report'].read_group([('date','>','2020-12-11'),('date','<=','2021-01-13')],fields=['product_uom_qty'], groupby=['product_id'])
+        ventes = dict([(data['product_id'][0], data['product_uom_qty']) for data in vendus if data['product_uom_qty']<2])
+        prodvendus = list(ventes.keys())
+        for prod in prods:
+            #if prod.qty_available*prod.standard_price > 600000:
+               prodid = self.env['product.product'].search([('product_tmpl_id','=',prod.id)])[0].id
+               if prodid in prodvendus:
+                  vals = {
+                    'name':prod.name,
+                    'default_code':prod.default_code,
+                    'lst_price':prod.lst_price,
+                    'qty_available':prod.qty_available,
+                    'uom_id':prod.uom_id.name,
+                    'dashstate':'sol2'
+                    }
+                  dashprod.create(vals)        
+    name = fields.Char('Nom')
+
+    def asolder3(self):
+        dashprod = self.env['dashbord.templatestock']
+        prods = self.env['product.template'].search([('qty_available','>',20)])
+        vendus = self.env['sale.report'].read_group([('date','>','2020-10-11'),('date','<=','2021-01-13')],fields=['product_uom_qty'], groupby=['product_id'])
+        ventes = dict([(data['product_id'][0], data['product_uom_qty']) for data in vendus if data['product_uom_qty']<10])
+        prodvendus = list(ventes.keys())
+        for prod in prods:
+               prodid = self.env['product.product'].search([('product_tmpl_id','=',prod.id)])[0].id
+               if prodid in prodvendus:
+                  vals = {
+                    'name':prod.name,
+                    'default_code':prod.default_code,
+                    'lst_price':prod.lst_price,
+                    'qty_available':prod.qty_available,
+                    'uom_id':prod.uom_id.name,
+                    'dashstate':'sol3'
+                    }
+                  dashprod.create(vals)        
     name = fields.Char('Nom')
     
 class ProductDash(models.Model):
