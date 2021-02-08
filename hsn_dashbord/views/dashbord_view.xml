@@ -145,5 +145,133 @@
         </p>
       </field>
     </record>
+
+		 	<record id="dashbord_critere_form" model="ir.ui.view">
+	         <field name="name">dashbord.critere.form</field>
+             <field name="model">dashbord.critere</field>
+             <field name="arch" type="xml">
+	         <form string="dashbords">
+                      <header>
+					    <button name="appliquer" string="APPLIQUER" type="object" class="btn-primary" attrs="{'invisible': [('state', '!=', 'nouveau')]}" />
+						<field name="state" widget="statusbar" statusbar_visible="nouveau,valide" />
+                      </header>
+                      <sheet>
+                      <group>
+                       <group>
+                          <field name="name"/>
+                       </group>
+                      </group>
+						  <div style="font-size:22px;font-color:blue;float:left;width:60%;">CRITERES</div>
+						  <div style="font-size:22px;font-color:blue;float:left;width:30%;">RESULTAT</div>
+						  <div style="float:left;width:60%;">
+                              <table class="table-condensed" style="width:100%;">
+							    <tr><th>Actif</th><th>Critère</th><th>Période</th><th>Opérateur</th><th>Valeur</th></tr>
+								<tr>
+								   <td><field name="aqtevendue" nolabel="1"/></td>
+								   <td>Quantité vendue</td>
+								   <td><field name="intqtevendue" nolabel="1" attrs="{'invisible': [('aqtevendue', '!=', True)]}"/></td>
+								   <td><field name="opqtevendue" nolabel="1" attrs="{'invisible': [('aqtevendue', '!=', True)]}"/></td>
+								   <td><field name="qtevendue" nolabel="1" attrs="{'invisible': [('aqtevendue', '!=', True)]}"/></td>
+								</tr>
+								<tr>
+								   <td><field name="aqteachetee" nolabel="1"/></td>
+								   <td>Quantité achetée</td>
+								   <td><field name="intqteachetee" nolabel="1" attrs="{'invisible': [('aqteachetee', '!=', True)]}"/></td>
+								   <td><field name="opqteachetee" nolabel="1" attrs="{'invisible': [('aqteachetee', '!=', True)]}"/></td>
+								   <td><field name="qteachetee" nolabel="1" attrs="{'invisible': [('aqteachetee', '!=', True)]}"/></td>
+								</tr>
+								<tr>
+								   <td><field name="aqtedispo" nolabel="1"/></td>
+								   <td>Stock</td>
+								   <td></td>
+								   <td><field name="opqtedispo" nolabel="1" attrs="{'invisible': [('aqtedispo', '!=', True)]}"/></td>
+								   <td><field name="qtedispo" nolabel="1" attrs="{'invisible': [('aqtedispo', '!=', True)]}"/></td>
+								</tr>
+								<tr>
+								   <td><field name="avaleurvendue" nolabel="1"/></td>
+								   <td>Valeur vendue</td>
+								   <td><field name="intvaleurvendue" nolabel="1" attrs="{'invisible': [('avaleurvendue', '!=', True)]}"/></td>
+								   <td><field name="opvaleurvendue" nolabel="1" attrs="{'invisible': [('avaleurvendue', '!=', True)]}"/></td>
+								   <td><field name="valeurvendue" nolabel="1" attrs="{'invisible': [('avaleurvendue', '!=', True)]}"/></td>
+								</tr>
+								<tr>
+								   <td><field name="avaleurachetee" nolabel="1"/></td>
+								   <td>Valeur achetée</td>
+								   <td><field name="intvaleurachetee" nolabel="1" attrs="{'invisible': [('avaleurachetee', '!=', True)]}"/></td>
+								   <td><field name="opvaleurachetee" nolabel="1" attrs="{'invisible': [('avaleurachetee', '!=', True)]}"/></td>
+								   <td><field name="valeurachetee" nolabel="1" attrs="{'invisible': [('avaleurachetee', '!=', True)]}"/></td>
+								</tr>
+								<tr>
+								   <td><field name="acoutrevient" nolabel="1"/></td>
+								   <td>Coût de revient</td>
+								   <td><field name="intcoutrevient" nolabel="1" attrs="{'invisible': [('acoutrevient', '!=', True)]}"/></td>
+								   <td><field name="opcoutrevient" nolabel="1" attrs="{'invisible': [('acoutrevient', '!=', True)]}"/></td>
+								   <td><field name="coutrevient" nolabel="1" attrs="{'invisible': [('acoutrevient', '!=', True)]}"/></td>
+								</tr>
+								<tr>
+								   <td><field name="amargepercent" nolabel="1"/></td>
+								   <td>Marge (%)</td>
+								   <td></td>
+								   <td><field name="opmargepercent" nolabel="1" attrs="{'invisible': [('amargepercent', '!=', True)]}"/></td>
+								   <td><field name="margepercent" nolabel="1" attrs="{'invisible': [('amargepercent', '!=', True)]}"/></td>
+								</tr>
+								<tr>
+								   <td><field name="amargevaleur" nolabel="1"/></td>
+								   <td>Marge (Valeur)</td>
+								   <td></td>
+								   <td><field name="opmargevaleur" nolabel="1" attrs="{'invisible': [('amargevaleur', '!=', True)]}"/></td>
+								   <td><field name="margevaleur" nolabel="1" attrs="{'invisible': [('amargevaleur', '!=', True)]}"/></td>
+								</tr>
+								<tr>
+								   <td><field name="aca" nolabel="1"/></td>
+								   <td>Chiffre d'affaire</td>
+								   <td></td>
+								   <td><field name="opca" nolabel="1" attrs="{'invisible': [('aca', '!=', True)]}"/></td>
+								   <td><field name="ca" nolabel="1" attrs="{'invisible': [('aca', '!=', True)]}"/></td>
+								</tr>
+								<tr>
+								   <td colspan="2">APPLIQUER AU KANBAN</td>
+								   <td colspan="3"><field name="kanban" nolabel="1" /></td>
+								</tr>
+							  </table>
+</div>
+						  <div style="font-size:18px;font-color:blue;float:left;width:30%;"><field name="resumecritere" nolabel="1"/></div>
+                    </sheet>
+                </form>
+			</field>
+	     </record> 
+		 
+        <record id="dashbord_critere_tree" model="ir.ui.view">
+	         <field name="name">dashbord.critere.tree</field>
+             <field name="model">dashbord.critere</field>
+             <field name="arch" type="xml">
+	         <tree string="dashbords">
+							<field name="name" />
+
+                </tree>
+			</field>
+	     </record>
+		 <record id="dashbord_critere_search" model="ir.ui.view">
+	         <field name="name">dashbord.critere.search</field>
+             <field name="model">dashbord.critere</field>
+             <field name="arch" type="xml">
+	         <tree string="dashbords">
+							<field name="name"/>
+                </tree>
+			</field>
+	     </record>
+
+ <record model="ir.actions.act_window" id="action_dashbord_critere">
+      <field name="name">CRITERES DASHBORD</field>
+      <field name="type">ir.actions.act_window</field>
+      <field name="res_model">dashbord.critere</field>
+      <field name="view_mode">tree,form</field>
+      <field name="view_id" ref="dashbord_critere_tree"/>
+      <field name="help" type="html">
+        <p class="oe_view_nocontent_create">
+          Cliquer ici pour composer des criteres
+        </p>
+      </field>
+    </record>
 	    </data>
 </odoo>

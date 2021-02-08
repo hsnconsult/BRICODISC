@@ -105,4 +105,71 @@ class ProductDash(models.Model):
         return super(ProductDash, self).write(values) 
         
     def _expand_states(self, states, domain, order):
-        return [key for key, val in type(self).dashstate.selection]    
+        return [key for key, val in type(self).dashstate.selection] 
+
+class CritereDash(models.Model):
+    _name = "dashbord.critere"
+    _description = "Criteres"  
+
+    @api.depends('aqtevendue','aqteachetee','aqtedispo','avaleurachetee','avaleurvendue','acoutrevient','amargepercent','amargevaleur','aca','opqteachetee','opqtevendue','opqtedispo','opvaleurachetee','opvaleurvendue','opcoutrevient','opmargepercent','opmargevaleur','opca','intqteachetee','intqtevendue','intvaleurachetee','intvaleurvendue','intcoutrevient','qteachetee','qtevendue','qtedispo','valeurachetee','valeurvendue','coutrevient','margepercent','margevaleur','ca')
+    def get_resumecritere(self):
+        for record in self:
+            critere = ''
+            if record.aqtevendue == True:
+               critere = critere + ' Quantité vendue '+str(record.intqtevendue)+' jours '+str(record.opqtevendue)+' '+str(record.qtevendue)+';'
+            if record.aqteachetee == True:
+               critere = critere + ' Quantité achetee '+str(record.intqteachetee)+' jours '+str(record.opqteachetee)+' '+str(record.qteachetee)+';'
+            if record.aqtedispo == True:
+               critere = critere + ' Stock '+str(record.opqtedispo)+' '+str(record.qtedispo)+';'
+            if record.avaleurvendue == True:
+               critere = critere + ' Valeur vendue '+str(record.intvaleurvendue)+' jours '+str(record.opvaleurvendue)+' '+str(record.valeurvendue)+';'
+            if record.avaleurachetee == True:
+               critere = critere + ' Valeur achetée '+str(record.intvaleurachetee)+' jours '+str(record.opvaleurachetee)+' '+str(record.valeurachetee)+';'
+            if record.acoutrevient == True:
+               critere = critere + ' Coutrevient '+str(record.intcoutrevient)+' jours '+str(record.opcoutrevient)+' '+str(record.coutrevient  )+';'
+            if record.amargepercent == True:
+               critere = critere + ' Marge (%) '+str(record.opmargepercent)+' '+str(record.margepercent)+';'
+            if record.margevaleur == True:
+               critere = critere + ' Marge valeur '+str(record.opmargevaleur)+' '+str(record.margevaleur)+';'
+            if record.aca == True:
+               critere = critere + ' CA '+str(record.opca)+' '+str(record.ca)+';'
+            record.resumecritere = critere
+    def appliquer(self):
+        self.write({'state':'valide'})
+    name = fields.Char('Description')
+    qtevendue = fields.Float('Quantité vendue', digits=(16,0))
+    opqtevendue = fields.Selection([('inf','Inférieure'),('infeg','Inférieure ou égale'),('eg','Egale'),('sup','Supérieure'),('supeg','Supérieure ou égale')], 'Op qtevendue')
+    intqtevendue = fields.Integer('Intervalle Qte vendue')
+    aqtevendue = fields.Boolean('A Quantité vendue', default=False)
+    qteachetee = fields.Float('Quantité achetée', digits=(16,0)) 
+    opqteachetee = fields.Selection([('inf','Inférieure'),('infeg','Inférieure ou égale'),('eg','Egale'),('sup','Supérieure'),('supeg','Supérieure ou égale')], 'Op qteachetee')
+    intqteachetee = fields.Integer('Intervalle Qte achetee')
+    aqteachetee = fields.Boolean('A Quantité achetée', default=False)
+    qtedispo = fields.Float('Quantité disponible', digits=(16,0))
+    opqtedispo = fields.Selection([('inf','Inférieure'),('infeg','Inférieure ou égale'),('eg','Egale'),('sup','Supérieure'),('supeg','Supérieure ou égale')], 'Op qtedispo')
+    aqtedispo = fields.Boolean('A Quantité dispo', default=False)
+    valeurvendue = fields.Float('Valeur vendue', digits=(16,0))
+    opvaleurvendue = fields.Selection([('inf','Inférieure'),('infeg','Inférieure ou égale'),('eg','Egale'),('sup','Supérieure'),('supeg','Supérieure ou égale')], 'Op valeurvendue')
+    intvaleurvendue = fields.Integer('Intervalle Valeur vendue')
+    avaleurvendue = fields.Boolean('A Valeur vendue', default=False)
+    valeurachetee = fields.Float('Valeur achetée', digits=(16,0))
+    opvaleurachetee = fields.Selection([('inf','Inférieure'),('infeg','Inférieure ou égale'),('eg','Egale'),('sup','Supérieure'),('supeg','Supérieure ou égale')], 'Op valeurachetee')
+    intvaleurachetee = fields.Integer('Intervalle Valeur achetee')
+    avaleurachetee = fields.Boolean('A Valeur achetée', default=False)    
+    coutrevient = fields.Float('Coût de revient', digits=(16,0))
+    opcoutrevient = fields.Selection([('inf','Inférieure'),('infeg','Inférieure ou égale'),('eg','Egale'),('sup','Supérieure'),('supeg','Supérieure ou égale')], 'Op coutrevient')
+    intcoutrevient = fields.Integer('Intervalle Cout de revient') 
+    acoutrevient = fields.Boolean('A Coût revient', default=False)    
+    margepercent = fields.Float('Marge(%)', digits=(16,0)) 
+    opmargepercent = fields.Selection([('inf','Inférieure'),('infeg','Inférieure ou égale'),('eg','Egale'),('sup','Supérieure'),('supeg','Supérieure ou égale')], 'Op margepercent')
+    amargepercent = fields.Boolean('A Margeper', default=False)
+    margevaleur = fields.Float('Marge', digits=(16,0))
+    opmargevaleur = fields.Selection([('inf','Inférieure'),('infeg','Inférieure ou égale'),('eg','Egale'),('sup','Supérieure'),('supeg','Supérieure ou égale')], 'Op margevaleur')    
+    amargevaleur = fields.Boolean('A Marge valeur', default=False)
+    ca = fields.Float('Chiffre d\'affaire', digits=(16,0))
+    opca = fields.Selection([('inf','Inférieure'),('infeg','Inférieure ou égale'),('eg','Egale'),('sup','Supérieure'),('supeg','Supérieure ou égale')], 'Op ca')
+    aca = fields.Boolean('A CA', default=False)
+    #Choix des kanbans
+    kanban = fields.Selection([('psolde','Produits à solder'),('pmav','Produits à mettre en avant'),('pinv','Produits à inventorier'),('pneg','Produits à négocier'),('pnpc','Produits à ne plus commander')], 'Appliquer au KANBAN')
+    resumecritere = fields.Char('Resume Critère', compute='get_resumecritere')
+    state = fields.Selection([('nouveau','Nouveau'),('valide','Validé')], string='State', size=64, default='nouveau' ,track_visibility='onchange', required=True)
