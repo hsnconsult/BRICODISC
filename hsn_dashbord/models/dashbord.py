@@ -153,8 +153,9 @@ class CritereDash(models.Model):
                    "AND s.date BETWEEN CURRENT_DATE-"+str(self.intqtevendue)+"  AND CURRENT_DATE "\
                    "GROUP BY s.product_id, t.id " \
                    "HAVING sum(s.product_uom_qty)"+str(self.opqtevendue)+str(self.qtevendue)+""
-        self.env.cr.execute(requete1)
-        resrequete1 = self.env.cr.dictfetchall()
+        if self.aqtevendue:
+           self.env.cr.execute(requete1)
+           resrequete1 = self.env.cr.dictfetchall()
         req1_prod_ids = []
         for res in resrequete1:
             req1_prod_ids.append(res['id'])
@@ -167,8 +168,9 @@ class CritereDash(models.Model):
                    "AND p.date_order BETWEEN CURRENT_DATE-"+str(self.intqtevendue)+"  AND CURRENT_DATE "\
                    "GROUP BY p.product_id, t.id " \
                    "HAVING sum(p.qty_ordered)"+str(self.opqteachetee)+str(self.qteachetee)+""
-        self.env.cr.execute(requete2)
-        resrequete2 = self.env.cr.dictfetchall()
+        if self.aqteachetee:
+           self.env.cr.execute(requete2)
+           resrequete2 = self.env.cr.dictfetchall()
         req2_prod_ids = []
         for res in resrequete2:
             req2_prod_ids.append(res['id'])
