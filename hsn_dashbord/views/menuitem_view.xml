@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+<!-- Menus  -->
+    <menuitem id="hsndashbord" name="TABLEAUX DE BORD BRICO" sequence="150" web_icon="hsn_dashbord,static/description/tbord.png"/>
+	<menuitem id="hsndashbord_stock" name="STOCKS" parent="hsndashbord" sequence="20"/>
+	<menuitem id="hsndashbord_stock_solde" name="PRODUITS A SOLDER" parent="hsndashbord_stock"  sequence="10"/>
+	<menuitem id="hsndashbord_stock_solde_psolde20" name="Produits à solder - 20%" parent="hsndashbord_stock_solde"  sequence="10" action="action_dashbord_psolde20"/>
+	<menuitem id="hsndashbord_stock_solde_psolde40" name="Produits à solder - 40%" parent="hsndashbord_stock_solde"  sequence="20" action="action_dashbord_psolde40"/>
+	<menuitem id="hsndashbord_stock_solde_psolde50" name="Produits à solder - 50%" parent="hsndashbord_stock_solde"  sequence="30" action="action_dashbord_psolde50"/>
+	<menuitem id="hsndashbord_stock_solde_psolde70" name="Produits à solder - 70%" parent="hsndashbord_stock_solde"  sequence="40" action="action_dashbord_psolde70"/>
+	<menuitem id="hsndashbord_stock_pmav" name="PRODUITS A METTRE EN AVANT" parent="hsndashbord_stock"  sequence="20"/>
+	<menuitem id="hsndashbord_stock_pmav_pmav1" name="Produits à mettre en avant - Priorité 1" parent="hsndashbord_stock_pmav"  sequence="10" action="action_dashbord_pmav1"/>
+	<menuitem id="hsndashbord_stock_pmav_pmav2" name="Produits à mettre en avant - Priorité 2" parent="hsndashbord_stock_pmav"  sequence="20" action="action_dashbord_pmav2"/>
+	<menuitem id="hsndashbord_stock_pmav_pmav3" name="Produits à mettre en avant - Priorité 3" parent="hsndashbord_stock_pmav"  sequence="30" action="action_dashbord_pmav3"/>
+	<menuitem id="hsndashbord_stock_pneg" name="PRODUITS A NEGOCIER" parent="hsndashbord_stock"  sequence="30"/>
+	<menuitem id="hsndashbord_stock_pneg_pneg1" name="Produits à negocier - Priorité 1" parent="hsndashbord_stock_pneg"  sequence="10" action="action_dashbord_pneg1"/>
+	<menuitem id="hsndashbord_stock_pneg_pneg2" name="Produits à negocier - Priorité 2" parent="hsndashbord_stock_pneg"  sequence="20" action="action_dashbord_pneg2"/>
+	<menuitem id="hsndashbord_stock_pnepacom" name="PRODUITS A NE PLUS COMMANDER" parent="hsndashbord_stock"  sequence="40"/>
+	<menuitem id="hsndashbord_stock_pnepacom_pnepacom1" name="Produits à commander peu" parent="hsndashbord_stock_pnepacom"  sequence="10" action="action_dashbord_pnepacom1"/>
+    <menuitem id="hsndashbord_stock_pnepacom_pnepacom2" name="Produits à ne plus commander" parent="hsndashbord_stock_pnepacom"  sequence="20" action="action_dashbord_pnepacom2"/>
+	<menuitem id="hsndashbord_stock_pnrup" name="PRODUITS INTERDIT DE RUPTURE" parent="hsndashbord_stock"  sequence="50"/>
+    <menuitem id="hsndashbord_stock_pnrup_pnrup1" name="Produits interdit de rupture - Priorité 1" parent="hsndashbord_stock_pnrup"  sequence="10" action="action_dashbord_pnrup1"/>
+    <menuitem id="hsndashbord_stock_pnrup_pnrup2" name="Produits interdit de rupture - Priorité 2" parent="hsndashbord_stock_pnrup"  sequence="20" action="action_dashbord_pnrup2"/>
+    <menuitem id="hsndashbord_stock_pnrup_pnrup3" name="Produits interdit de rupture - Priorité 3" parent="hsndashbord_stock_pnrup"  sequence="30" action="action_dashbord_pnrup3"/>
+
+	<menuitem id="hsndashbord_critere" name="Tableau de critères" parent="hsndashbord"  sequence="15"/>
+	<menuitem id="hsndashbord_critere_stock" name="STOCKS" parent="hsndashbord_critere"  sequence="10" action="action_dashbord_critere"/>
+	    </data>
+</odoo>
