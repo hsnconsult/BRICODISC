@@ -235,7 +235,7 @@ class CritereDash(models.Model):
         self.env.cr.execute(reqsup)
         #Alimentation du kanban
         dashprod = self.env['dashbord.produitstock']
-        dashprodexist = self.env['dashbord.produitstock'].search([])
+        dashprodexist = self.env['dashbord.produitstock'].search([('kanban','=',self.kanban.code)])
         tempexist = []
         for exist in dashprodexist:
             tempexist.append(exist.product_id.id)
