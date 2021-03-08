@@ -151,7 +151,7 @@ class CritereDash(models.Model):
         if self.amargepercent:
             requete7 = self.env['product.template'].search([])  
             for res in requete7:
-                marge = (res.list_price-res.standard_price)/res.standard_price if standard_price!=0 else 1
+                marge = (res.list_price-res.standard_price)/res.standard_price if res.standard_price!=0 else 1
                 if self.opmargepercent == '<':
                     if marge*100 < margepercent:
                         req7_prod_ids.append(res.id) 
