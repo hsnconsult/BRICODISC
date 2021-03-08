@@ -222,7 +222,7 @@
       <field name="name">PRODUITS A SOLDER - 20%</field>
       <field name="type">ir.actions.act_window</field>
       <field name="res_model">dashbord.produitstock</field>
-      <field name="view_mode">kanban</field>
+      <field name="view_mode">kanban,form,pivot</field>
       <field name="view_id" ref="hsn_dashbord.dashbord_produitstock_kanban"/>
       <field name="domain">[('kanban','=','psolde20')]</field>
       <field name="help" type="html">
@@ -235,7 +235,7 @@
       <field name="name">PRODUITS A SOLDER - 40%</field>
       <field name="type">ir.actions.act_window</field>
       <field name="res_model">dashbord.produitstock</field>
-      <field name="view_mode">kanban</field>
+      <field name="view_mode">kanban,form,pivot</field>
       <field name="view_id" ref="hsn_dashbord.dashbord_produitstock_kanban"/>
       <field name="domain">[('kanban','=','psolde40')]</field>
       <field name="help" type="html">
@@ -248,7 +248,7 @@
       <field name="name">PRODUITS A SOLDER - 50%</field>
       <field name="type">ir.actions.act_window</field>
       <field name="res_model">dashbord.produitstock</field>
-      <field name="view_mode">kanban,form,tree,pivot</field>
+      <field name="view_mode">kanban,form,pivot</field>
       <field name="view_id" ref="hsn_dashbord.dashbord_produitstock_kanban"/>
       <field name="domain">[('kanban','=','psolde50')]</field>
       <field name="help" type="html">
@@ -261,7 +261,7 @@
       <field name="name">PRODUITS A SOLDER - 70%</field>
       <field name="type">ir.actions.act_window</field>
       <field name="res_model">dashbord.produitstock</field>
-      <field name="view_mode">kanban</field>
+      <field name="view_mode">kanban,form,pivot</field>
       <field name="view_id" ref="hsn_dashbord.dashbord_produitstock_kanban"/>
       <field name="domain">[('kanban','=','psolde70')]</field>
       <field name="help" type="html">
@@ -273,7 +273,7 @@
       <field name="name">PRODUITS A METTRE EN AVANT - PRIORITE 1</field>
       <field name="type">ir.actions.act_window</field>
       <field name="res_model">dashbord.produitstock</field>
-      <field name="view_mode">kanban</field>
+      <field name="view_mode">kanban,form,pivot</field>
       <field name="view_id" ref="hsn_dashbord.dashbord_produitstock_kanban"/>
       <field name="domain">[('kanban','=','pmav1')]</field>
       <field name="help" type="html">
@@ -286,7 +286,7 @@
       <field name="name">PRODUITS A METTRE EN AVANT - PRIORITE 2</field>
       <field name="type">ir.actions.act_window</field>
       <field name="res_model">dashbord.produitstock</field>
-      <field name="view_mode">kanban</field>
+      <field name="view_mode">kanban,form,pivot</field>
       <field name="view_id" ref="hsn_dashbord.dashbord_produitstock_kanban"/>
       <field name="domain">[('kanban','=','pmav2')]</field>
       <field name="help" type="html">
@@ -299,7 +299,7 @@
       <field name="name">PRODUITS A METTRE EN AVANT - PRIORITE 3</field>
       <field name="type">ir.actions.act_window</field>
       <field name="res_model">dashbord.produitstock</field>
-      <field name="view_mode">kanban</field>
+      <field name="view_mode">kanban,form,pivot</field>
       <field name="view_id" ref="hsn_dashbord.dashbord_produitstock_kanban"/>
       <field name="domain">[('kanban','=','pmav3')]</field>
       <field name="help" type="html">
@@ -312,7 +312,7 @@
       <field name="name">PRODUITS A NEGOCIER - PRIORITE 1</field>
       <field name="type">ir.actions.act_window</field>
       <field name="res_model">dashbord.produitstock</field>
-      <field name="view_mode">kanban</field>
+      <field name="view_mode">kanban,form,pivot</field>
       <field name="view_id" ref="hsn_dashbord.dashbord_produitstock_kanban"/>
       <field name="domain">[('kanban','=','pneg1')]</field>
       <field name="help" type="html">
@@ -325,7 +325,7 @@
       <field name="name">PRODUITS A NEGOCIER - PRIORITE 2</field>
       <field name="type">ir.actions.act_window</field>
       <field name="res_model">dashbord.produitstock</field>
-      <field name="view_mode">kanban</field>
+      <field name="view_mode">kanban,form,pivot</field>
       <field name="view_id" ref="hsn_dashbord.dashbord_produitstock_kanban"/>
       <field name="domain">[('kanban','=','pneg2')]</field>
       <field name="help" type="html">
@@ -338,7 +338,7 @@
       <field name="name">PRODUITS A COMMANDER PEU</field>
       <field name="type">ir.actions.act_window</field>
       <field name="res_model">dashbord.produitstock</field>
-      <field name="view_mode">kanban</field>
+      <field name="view_mode">kanban,form,pivot</field>
       <field name="view_id" ref="hsn_dashbord.dashbord_produitstock_kanban"/>
       <field name="domain">[('kanban','=','pnepacom1')]</field>
       <field name="help" type="html">
@@ -351,7 +351,7 @@
       <field name="name">PRODUITS A NE PLUS COMMANDER</field>
       <field name="type">ir.actions.act_window</field>
       <field name="res_model">dashbord.produitstock</field>
-      <field name="view_mode">kanban</field>
+      <field name="view_mode">kanban,form,pivot</field>
       <field name="view_id" ref="hsn_dashbord.dashbord_produitstock_kanban"/>
       <field name="domain">[('kanban','=','pnepacom2')]</field>
       <field name="help" type="html">
@@ -364,7 +364,7 @@
       <field name="name">PRODUITS INTERDIT DE RUPTURE - PRIORITE 1</field>
       <field name="type">ir.actions.act_window</field>
       <field name="res_model">dashbord.produitstock</field>
-      <field name="view_mode">kanban</field>
+      <field name="view_mode">kanban,form,pivot</field>
       <field name="view_id" ref="hsn_dashbord.dashbord_produitstock_kanban"/>
       <field name="domain">[('kanban','=','_pnrup1')]</field>
       <field name="help" type="html">
@@ -377,7 +377,7 @@
       <field name="name">PRODUITS INTERDIT DE RUPTURE - PRIORITE 2</field>
       <field name="type">ir.actions.act_window</field>
       <field name="res_model">dashbord.produitstock</field>
-      <field name="view_mode">kanban</field>
+      <field name="view_mode">kanban,form,pivot</field>
       <field name="view_id" ref="hsn_dashbord.dashbord_produitstock_kanban"/>
       <field name="domain">[('kanban','=','pnrup2')]</field>
       <field name="help" type="html">
@@ -390,7 +390,7 @@
       <field name="name">PRODUITS INTERDIT DE RUPTURE - PRIORITE 3</field>
       <field name="type">ir.actions.act_window</field>
       <field name="res_model">dashbord.produitstock</field>
-      <field name="view_mode">kanban</field>
+      <field name="view_mode">kanban,form,pivot</field>
       <field name="view_id" ref="hsn_dashbord.dashbord_produitstock_kanban"/>
       <field name="domain">[('kanban','=','pnrup3')]</field>
       <field name="help" type="html">
