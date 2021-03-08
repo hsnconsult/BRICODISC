@@ -126,19 +126,19 @@ class CritereDash(models.Model):
             requete5 = self.env['product.template'].search([])
             for res in requete5:
                 if self.opvaleurachetee == '<':
-                    if res.qty_available*res.list_price < self.valeurachetee:
+                    if res.qty_available*res.standard_price < self.valeurachetee:
                         req5_prod_ids.append(res.id)
                 if self.opvaleurachetee == '<=':
-                    if res.qty_available*res.list_price <= self.valeurachetee:
+                    if res.qty_available*res.standard_price <= self.valeurachetee:
                         req5_prod_ids.append(res.id)
                 if self.opvaleurachetee == '>':
-                    if res.qty_available*res.list_price > self.valeurachetee:
+                    if res.qty_available*res.standard_price > self.valeurachetee:
                         req5_prod_ids.append(res.id)
                 if self.opvaleurachetee == '>=':
-                    if res.qty_available*res.list_price >= self.valeurachetee:
+                    if res.qty_available*res.standard_price >= self.valeurachetee:
                         req5_prod_ids.append(res.id)
                 if self.opvaleurachetee == '=':
-                    if res.qty_available*res.list_price == self.valeurachetee:
+                    if res.qty_available*res.standard_price == self.valeurachetee:
                         req5_prod_ids.append(res.id)
         
         #Critere Cout de revient 
