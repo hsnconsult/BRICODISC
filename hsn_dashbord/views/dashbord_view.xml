@@ -165,7 +165,7 @@
                       <sheet>
                       <group>
                         <group>
-							<field name="name" />
+							<field name="product_id" />
 							<field name="lst_price" />
 							<field name="default_code" />
 							<field name="barcode" />
@@ -185,7 +185,7 @@
              <field name="model">dashbord.produitstock</field>
              <field name="arch" type="xml">
 	         <tree string="dashbords">
-							<field name="name" />
+							<field name="product_id" />
 							<field name="lst_price" />
 							<field name="default_code" />
 							<field name="barcode" />
