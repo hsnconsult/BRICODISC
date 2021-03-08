@@ -234,15 +234,15 @@ class CritereDash(models.Model):
         reqsup = "DELETE FROM dashbord_produitstock WHERE kanban ='"+str(self.kanban.code)+"'"
         self.env.cr.execute(reqsup)
         #Alimentation du kanban
-        dashprod = self.env['dashbord.produitstock']
-        dashprodexist = self.env['dashbord.produitstock'].search([('kanban','=',self.kanban.code)])
-        tempexist = []
-        for exist in dashprodexist:
-            tempexist.append(exist.product_id.id)
+        #dashprod = self.env['dashbord.produitstock']
+        #dashprodexist = self.env['dashbord.produitstock'].search([('kanban','=',self.kanban.code)])
+        #tempexist = []
+        #for exist in dashprodexist:
+        #    tempexist.append(exist.product_id.id)
         #raise UserError(tempexist)
-        prods = self.env['product.template'].search([])
+        prods = self.env['product.template'].search([('id','in',list(result))])
         for prod in prods:
-            if prod.id in list(result) and prod.id not in tempexist:
+            #if prod.id in list(result):
                   vals = {
                     'name':prod.name,
                     'default_code':prod.default_code,
