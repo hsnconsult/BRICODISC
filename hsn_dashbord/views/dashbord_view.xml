@@ -206,7 +206,7 @@
 							<field name="default_code" type="measure" />
 							<field name="qty_available" type="measure" />
 
-                </tree>
+                </pivot>
 			</field>
 	     </record>
 		 <record id="dashbord_produitstock_search" model="ir.ui.view">
