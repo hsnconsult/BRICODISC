@@ -196,6 +196,16 @@
                 </tree>
 			</field>
 	     </record>
+	            <record id="dashbord_produitstock_pivot" model="ir.ui.view">
+	         <field name="name">dashbord.produitstock.pivot</field>
+             <field name="model">dashbord.produitstock</field>
+             <field name="arch" type="xml">
+	         <pivot string="dashbords">
+							<field name="product_id" />
+
+                </tree>
+			</field>
+	     </record>
 		 <record id="dashbord_produitstock_search" model="ir.ui.view">
 	         <field name="name">dashbord.produitstock.search</field>
              <field name="model">dashbord.produitstock</field>
