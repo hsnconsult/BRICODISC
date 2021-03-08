@@ -153,19 +153,19 @@ class CritereDash(models.Model):
             for res in requete7:
                 marge = (res.list_price-res.standard_price)/res.standard_price if res.standard_price!=0 else 1
                 if self.opmargepercent == '<':
-                    if marge*100 < margepercent:
+                    if marge*100 < self.margepercent:
                         req7_prod_ids.append(res.id) 
                 if self.opmargepercent == '<=':
-                    if marge*100 <= margepercent:
+                    if marge*100 <= self.margepercent:
                         req7_prod_ids.append(res.id)
                 if self.opmargepercent == '>':
-                    if marge*100 > margepercent:
+                    if marge*100 > self.margepercent:
                         req7_prod_ids.append(res.id) 
                 if self.opmargepercent == '>=':
-                    if marge*100 >= margepercent:
+                    if marge*100 >= self.margepercent:
                         req7_prod_ids.append(res.id) 
                 if self.opmargepercent == '=':
-                    if marge*100 == margepercent:
+                    if marge*100 == self.margepercent:
                         req7_prod_ids.append(res.id) 
 
         #Critere Marge valeur
@@ -174,19 +174,19 @@ class CritereDash(models.Model):
             for res in requete8:
                 marge = res.list_price-res.standard_price
                 if self.opmargevaleur == '<':
-                    if marge < margevaleur:
+                    if marge < self.margevaleur:
                         req8_prod_ids.append(res.id) 
                 if self.opmargevaleur == '<=':
-                    if marge <= margevaleur:
+                    if marge <= self.margevaleur:
                         req8_prod_ids.append(res.id)
                 if self.opmargevaleur == '>':
-                    if marge > margevaleur:
+                    if marge > self.margevaleur:
                         req8_prod_ids.append(res.id) 
                 if self.opmargevaleur == '>=':
-                    if marge >= margevaleur:
+                    if marge >= self.margevaleur:
                         req8_prod_ids.append(res.id) 
                 if self.opmargevaleur == '=':
-                    if marge == margevaleur:
+                    if marge == self.margevaleur:
                         req8_prod_ids.append(res.id)  
 
         #Critere Chiffre Affaire
