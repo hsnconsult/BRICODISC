@@ -203,7 +203,6 @@
 	         <pivot string="dashbords">
 							<field name="product_id" type="row" />
 			                                <field name="lst_price" type="measure"/>
-							<field name="default_code" type="measure" />
 							<field name="qty_available" type="measure" />
 
                 </pivot>
