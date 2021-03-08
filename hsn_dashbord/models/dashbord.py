@@ -251,7 +251,8 @@ class CritereDash(models.Model):
                     'uom_id':prod.uom_id.name,
                     'dashstate':'backlog',
                     'product_id':prod.id,
-                    'kanban':self.kanban.code
+                    'kanban':self.kanban.code,
+                    'categ_id':prod.categ_id.id 
                     }
                   dashprod.create(vals)
         
@@ -315,6 +316,7 @@ class ProductDashStock(models.Model):
 
     name = fields.Char('Nom produit')
     product_id = fields.Many2one('product.template', 'Article')
+    categ_id = fields.Many2one('product.category', 'Catégorie')
     default_code = fields.Char('Référence')
     barcode = fields.Char('Code barre')
     lst_price = fields.Float('Prix')
