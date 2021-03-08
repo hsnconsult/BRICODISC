@@ -236,7 +236,7 @@
       <field name="name">PRODUITS A SOLDER - 50%</field>
       <field name="type">ir.actions.act_window</field>
       <field name="res_model">dashbord.produitstock</field>
-      <field name="view_mode">kanban,form</field>
+      <field name="view_mode">kanban,form,tree,pivot</field>
       <field name="view_id" ref="hsn_dashbord.dashbord_produitstock_kanban"/>
       <field name="domain">[('kanban','=','psolde50')]</field>
       <field name="help" type="html">
