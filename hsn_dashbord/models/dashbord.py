@@ -311,6 +311,7 @@ class DashKanban(models.Model):
 class ProductDashStock(models.Model):
     _name = "dashbord.produitstock"
     _description = "Stocks"
+    _rec_name = "product_id"
 
     name = fields.Char('Nom produit')
     product_id = fields.Many2one('product.template', 'Article')
