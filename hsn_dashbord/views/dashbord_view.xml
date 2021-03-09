@@ -45,6 +45,13 @@
 								   <td><field name="opqtedispo" nolabel="1" attrs="{'invisible': [('aqtedispo', '!=', True)]}"/></td>
 								   <td><field name="qtedispo" nolabel="1" attrs="{'invisible': [('aqtedispo', '!=', True)]}"/></td>
 								</tr>
+				                                <tr>
+								   <td><field name="aqtedispo2" nolabel="1"/></td>
+								   <td>Stock 2</td>
+								   <td></td>
+								   <td><field name="opqtedispo2" nolabel="1" attrs="{'invisible': [('aqtedispo2', '!=', True)]}"/></td>
+								   <td><field name="qtedispo2" nolabel="1" attrs="{'invisible': [('aqtedispo2', '!=', True)]}"/></td>
+								</tr>
 								<tr>
 								   <td><field name="avaleurvendue" nolabel="1"/></td>
 								   <td>Valeur revente</td>
