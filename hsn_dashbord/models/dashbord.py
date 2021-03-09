@@ -69,13 +69,12 @@ class CritereDash(models.Model):
         req9_prod_ids = []
         #Critere Quantité vendue
         if self.aqtevendue:
-            requete1 = "SELECT s.product_id, t.id, sum(s.product_uom_qty) " \
-                   "FROM sale_report s, product_template t, product_product p " \
-                   "WHERE p.product_tmpl_id = t.id " \
-                   "AND s.product_id = p.id " \
+            requete1 = "SELECT s.product_tmpl_id as id, sum(s.product_uom_qty) " \
+                   "FROM sale_report s, product_template t " \
+                   "AND s.product_tmpl_id = t.id " \
                    "AND s.date BETWEEN CURRENT_DATE-"+str(self.intqtevendue)+"  AND CURRENT_DATE " \
                    "AND s.state in ('sale','done') " \
-                   "GROUP BY s.product_id, t.id " \
+                   "GROUP BY s.product_tmpl_id " \
                    "HAVING sum(s.product_uom_qty)"+str(self.opqtevendue)+str(self.qtevendue)+""
             self.env.cr.execute(requete1)
             resrequete1 = self.env.cr.dictfetchall()
