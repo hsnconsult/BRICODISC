@@ -83,12 +83,12 @@ class CritereDash(models.Model):
         
         #Critere Quantité achetée
         if self.aqteachetee:
-            requete2 = "SELECT p.product_id, t.id, sum(p.qty_ordered) " \
-                   "FROM purchase_report p, product_template t, product_product pr " \
+            requete2 = "SELECT p.product_tmpl_id as id, sum(p.qty_ordered) " \
+                   "FROM purchase_report p, product_template t " \
                    "WHERE p.product_tmpl_id = t.id " \
-                   "AND p.product_id = pr.id " \
                    "AND p.date_order BETWEEN CURRENT_DATE-"+str(self.intqtevendue)+"  AND CURRENT_DATE "\
-                   "GROUP BY p.product_id, t.id " \
+                   "AND p.state in ('purchase','done') " \
+                   "GROUP BY p.product_tmpl_id " \
                    "HAVING sum(p.qty_ordered)"+str(self.opqteachetee)+str(self.qteachetee)+""   
             self.env.cr.execute(requete2)
             resrequete2 = self.env.cr.dictfetchall()
@@ -195,7 +195,8 @@ class CritereDash(models.Model):
                    "FROM sale_report s, product_template t, product_product p " \
                    "WHERE p.product_tmpl_id = t.id " \
                    "AND s.product_id = p.id " \
-                   "AND s.date BETWEEN CURRENT_DATE-"+str(self.intca)+"  AND CURRENT_DATE "\
+                   "AND s.date BETWEEN CURRENT_DATE-"+str(self.intca)+"  AND CURRENT_DATE " \
+                   "AND s.state in ('sale','invoiced','done','pos_done') " \
                    "GROUP BY s.product_id, t.id " \
                    "HAVING sum(s.price_subtotal)"+str(self.opca)+str(self.ca)+""  
             #raise UserError(requete9)                   
