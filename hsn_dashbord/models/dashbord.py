@@ -229,7 +229,7 @@ class CritereDash(models.Model):
            result = set(p[0])
            for s in p[1:]:
                result.intersection_update(s) 
-        #raise UserError(req9_prod_ids)
+        raise UserError(requete1)
         #suppression des anciens produits
         reqsup = "DELETE FROM dashbord_produitstock WHERE kanban ='"+str(self.kanban.code)+"'"
         self.env.cr.execute(reqsup)
