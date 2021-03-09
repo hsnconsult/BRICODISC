@@ -73,7 +73,8 @@ class CritereDash(models.Model):
                    "FROM sale_report s, product_template t, product_product p " \
                    "WHERE p.product_tmpl_id = t.id " \
                    "AND s.product_id = p.id " \
-                   "AND s.date BETWEEN CURRENT_DATE-"+str(self.intqtevendue)+"  AND CURRENT_DATE "\
+                   "AND s.date BETWEEN CURRENT_DATE-"+str(self.intqtevendue)+"  AND CURRENT_DATE " \
+                   "AND s.state in ('sale','done') " \
                    "GROUP BY s.product_id, t.id " \
                    "HAVING sum(s.product_uom_qty)"+str(self.opqtevendue)+str(self.qtevendue)+""
             self.env.cr.execute(requete1)
@@ -229,7 +230,7 @@ class CritereDash(models.Model):
            result = set(p[0])
            for s in p[1:]:
                result.intersection_update(s) 
-        raise UserError(requete1)
+        #raise UserError(requete1)
         #suppression des anciens produits
         reqsup = "DELETE FROM dashbord_produitstock WHERE kanban ='"+str(self.kanban.code)+"'"
         self.env.cr.execute(reqsup)
