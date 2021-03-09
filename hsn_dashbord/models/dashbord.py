@@ -73,7 +73,7 @@ class CritereDash(models.Model):
                    "FROM sale_report s, product_template t " \
                    "WHERE s.product_tmpl_id = t.id " \
                    "AND s.date BETWEEN CURRENT_DATE-"+str(self.intqtevendue)+"  AND CURRENT_DATE " \
-                   "AND s.state in ('sale','done') " \
+                   "AND s.state in ('sale','invoiced','done','pos_done') " \
                    "GROUP BY s.product_tmpl_id " \
                    "HAVING sum(s.product_uom_qty)"+str(self.opqtevendue)+str(self.qtevendue)+""
             self.env.cr.execute(requete1)
