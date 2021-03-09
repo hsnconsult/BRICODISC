@@ -37,6 +37,8 @@ class CritereDash(models.Model):
                critere = critere + ' Marge valeur '+str(record.opmargevaleur)+' '+str(record.margevaleur)+';'
             if record.aca == True:
                critere = critere + ' CA '+str(record.intca)+' jours '+str(record.opca)+' '+str(record.ca)+';'
+            if record.aqtedispo2 == True:
+               critere = critere + ' Stock '+str(record.opqtedispo2)+' '+str(record.qtedispo2)+';'
             record.resumecritere = critere
     def appliquer(self):
         #Formulation des requetes
@@ -58,6 +60,8 @@ class CritereDash(models.Model):
            raise UserError("Opérateur incorrect")
         if self.aca and not self.opca:
            raise UserError("Opérateur incorrect")
+        if self.aqtedispo2 and not self.opqtedispo2:
+           raise UserError("Opérateur incorrect")
         req1_prod_ids = []
         req2_prod_ids = []
         req3_prod_ids = []
@@ -67,6 +71,7 @@ class CritereDash(models.Model):
         req7_prod_ids = []
         req8_prod_ids = []
         req9_prod_ids = []
+        req10_prod_ids = []
         #Critere Quantité vendue
         if self.aqtevendue:
             requete1 = "SELECT s.product_tmpl_id as id, sum(s.product_uom_qty) " \
@@ -100,7 +105,12 @@ class CritereDash(models.Model):
             requete3 = self.env['product.template'].search([('qty_available',self.opqtedispo,self.qtedispo)])
             for res in requete3:
                 req3_prod_ids.append(res.id)
-        
+                
+        #Critere Quantité disponible 2
+        if self.aqtedispo2:
+            requete10 = self.env['product.template'].search([('qty_available',self.opqtedispo2,self.qtedispo2)])
+            for res in requete10:
+                req10_prod_ids.append(res.id)
         #Critere Valeur revente 
         if self.avaleurvendue:         
             requete4 = self.env['product.template'].search([])
@@ -224,6 +234,8 @@ class CritereDash(models.Model):
            p.append(req8_prod_ids)
         if self.aca:
            p.append(req9_prod_ids)
+        if self.aqtedispo2:
+           p.append(req10_prod_ids)
         #recuperation des elements communs
         result = {}
         if len(p) != 0:
@@ -271,6 +283,9 @@ class CritereDash(models.Model):
     qtedispo = fields.Float('Quantité disponible', digits=(16,0))
     opqtedispo = fields.Selection([('<','Inférieure'),('<=','Inférieure ou égale'),('=','Egale'),('>','Supérieure'),('>=','Supérieure ou égale')], 'Op qtedispo')
     aqtedispo = fields.Boolean('A Quantité dispo', default=False)
+    qtedispo2 = fields.Float('Quantité disponible', digits=(16,0))
+    opqtedispo2 = fields.Selection([('<','Inférieure'),('<=','Inférieure ou égale'),('=','Egale'),('>','Supérieure'),('>=','Supérieure ou égale')], 'Op qtedispo2')
+    aqtedispo2 = fields.Boolean('A Quantité dispo', default=False)
     valeurvendue = fields.Float('Valeur vendue', digits=(16,0))
     opvaleurvendue = fields.Selection([('<','Inférieure'),('<=','Inférieure ou égale'),('=','Egale'),('>','Supérieure'),('>=','Supérieure ou égale')], 'Op valeurvendue')
     intvaleurvendue = fields.Integer('Intervalle Valeur vendue')
