@@ -1,0 +1,4 @@
+[submodule "hsnconsult/DASH"]
+	path = hsnconsult/DASH
+	url = git@github.com:hsnconsult/DASH.git
+	branch = main
