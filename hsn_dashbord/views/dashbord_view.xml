@@ -33,7 +33,7 @@
 								</tr>
 								<tr>
 								   <td><field name="aqteachetee" nolabel="1"/></td>
-								   <td>Quantité achetéee</td>
+								   <td>Quantité achetée</td>
 								   <td><field name="intqteachetee" nolabel="1" attrs="{'invisible': [('aqteachetee', '!=', True)]}"/></td>
 								   <td><field name="opqteachetee" nolabel="1" attrs="{'invisible': [('aqteachetee', '!=', True)]}"/></td>
 								   <td><field name="qteachetee" nolabel="1" attrs="{'invisible': [('aqteachetee', '!=', True)]}"/></td>
@@ -373,7 +373,7 @@
       <field name="res_model">dashbord.produitstock</field>
       <field name="view_mode">kanban,form,pivot</field>
       <field name="view_id" ref="hsn_dashbord.dashbord_produitstock_kanban"/>
-      <field name="domain">[('kanban','=','_pnrup1')]</field>
+      <field name="domain">[('kanban','=','pnrup1')]</field>
       <field name="help" type="html">
         <p class="oe_view_nocontent_create">
           Cliquer ici pour ajouter un produitstock
