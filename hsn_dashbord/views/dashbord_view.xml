@@ -373,10 +373,10 @@
       <field name="res_model">dashbord.produitstock</field>
       <field name="view_mode">kanban,form,pivot</field>
       <field name="view_id" ref="hsn_dashbord.dashbord_produitstock_kanban"/>
-      <field name="domain">[('kanban','=','pnrup1')]</field>
+      <field name="domain">[('kanban','=','_pnrup1')]</field>
       <field name="help" type="html">
         <p class="oe_view_nocontent_create">
-          Cliquer ici pour ajouter un produitstocks
+          Cliquer ici pour ajouter un produitstock
         </p>
       </field>
     </record>
