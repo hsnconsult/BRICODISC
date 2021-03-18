@@ -33,7 +33,7 @@
 								</tr>
 								<tr>
 								   <td><field name="aqteachetee" nolabel="1"/></td>
-								   <td>Quantité achetée</td>
+								   <td>Quantité achetéee</td>
 								   <td><field name="intqteachetee" nolabel="1" attrs="{'invisible': [('aqteachetee', '!=', True)]}"/></td>
 								   <td><field name="opqteachetee" nolabel="1" attrs="{'invisible': [('aqteachetee', '!=', True)]}"/></td>
 								   <td><field name="qteachetee" nolabel="1" attrs="{'invisible': [('aqteachetee', '!=', True)]}"/></td>
