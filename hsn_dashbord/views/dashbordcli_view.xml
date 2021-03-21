@@ -48,7 +48,7 @@
 								<tr>
 								   <td><field name="aretard" nolabel="1"/></td>
 								   <td>Retard de paiement</td>
-								   <td><field name="intretard" nolabel="1" attrs="{'invisible': [('aretard', '!=', True)]}"/></td>
+								   <td></td>
 								   <td><field name="opretard" nolabel="1" attrs="{'invisible': [('aretard', '!=', True)]}"/></td>
 								   <td><field name="retard" nolabel="1" attrs="{'invisible': [('aretard', '!=', True)]}"/></td>
 								</tr>

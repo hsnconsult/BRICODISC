@@ -25,7 +25,7 @@ class CritereDashClient(models.Model):
             if record.afrequence == True:
                critere = critere + ' Frequence '+str(record.intfrequence)+' jours '+str(record.opca)+' '+str(record.frequence)+';'
             if record.aretard == True:
-               critere = critere + ' Retard '+str(record.intretard)+' jours '+str(record.opretard)+' '+str(record.retard)+';'
+               critere = critere + ' Retard '+str(record.opretard)+' '+str(record.retard)+';'
             record.resumecritere = critere
     def appliquer(self):
         #Formulation des requetes
