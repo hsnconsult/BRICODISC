@@ -1,0 +1,297 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+		 	<record id="dashbord_critereclient_form" model="ir.ui.view">
+	         <field name="name">dashbord.critereclient.form</field>
+             <field name="model">dashbord.critereclient</field>
+             <field name="arch" type="xml">
+	         <form string="dashbords">
+                      <header>
+					    <button name="appliquer" string="APPLIQUER" type="object" class="btn-primary" attrs="{'invisible': [('state', '!=', 'nouveau')]}" />
+						<field name="state" widget="statusbar" statusbar_visible="nouveau,valide" />
+                      </header>
+                      <sheet>
+                      <group>
+                       <group>
+                          <field name="kanban" options="{'no_create': True, 'no_create_edit':True, 'no_open':True}" />
+                       </group>
+                       <group>
+                          <field name="date"/>
+                       </group>
+                      </group>
+						  <div style="font-size:22px;font-color:blue;float:left;width:60%;">CRITERES</div>
+						  <div style="font-size:22px;font-color:blue;float:left;width:30%;">RESULTAT</div>
+						  <div style="float:left;width:60%;">
+                              <table class="table-condensed" style="width:100%;">
+							    <tr><th>Actif</th><th>Critère</th><th>Période</th><th>Opérateur</th><th>Valeur</th></tr>
+								<tr>
+								   <td><field name="aca" nolabel="1"/></td>
+								   <td>Chiffre d'affaire</td>
+								   <td><field name="intca" nolabel="1" attrs="{'invisible': [('aca', '!=', True)]}"/></td>
+								   <td><field name="opca" nolabel="1" attrs="{'invisible': [('aca', '!=', True)]}"/></td>
+								   <td><field name="ca" nolabel="1" attrs="{'invisible': [('aca', '!=', True)]}"/></td>
+								</tr>
+								<tr>
+								   <td><field name="amarge" nolabel="1"/></td>
+								   <td>Marge</td>
+								   <td><field name="intmarge" nolabel="1" attrs="{'invisible': [('amarge', '!=', True)]}"/></td>
+								   <td><field name="opmarge" nolabel="1" attrs="{'invisible': [('amarge', '!=', True)]}"/></td>
+								   <td><field name="marge" nolabel="1" attrs="{'invisible': [('amarge', '!=', True)]}"/></td>
+								</tr>
+								<tr>
+								   <td><field name="afrequence" nolabel="1"/></td>
+								   <td>Fréquence commande</td>
+								   <td><field name="intfrequence" nolabel="1" attrs="{'invisible': [('afrequence', '!=', True)]}"/></td>
+								   <td><field name="opfrequence" nolabel="1" attrs="{'invisible': [('afrequence', '!=', True)]}"/></td>
+								   <td><field name="frequence" nolabel="1" attrs="{'invisible': [('afrequence', '!=', True)]}"/></td>
+								</tr>
+								<tr>
+								   <td><field name="aretard" nolabel="1"/></td>
+								   <td>Retard de paiement</td>
+								   <td><field name="intretard" nolabel="1" attrs="{'invisible': [('aretard', '!=', True)]}"/></td>
+								   <td><field name="opretard" nolabel="1" attrs="{'invisible': [('aretard', '!=', True)]}"/></td>
+								   <td><field name="retard" nolabel="1" attrs="{'invisible': [('aretard', '!=', True)]}"/></td>
+								</tr>
+							  </table>
+</div>
+						  <div style="font-size:18px;font-color:blue;float:left;width:30%;"><field name="resumecritere" nolabel="1"/></div>
+                    </sheet>
+                </form>
+			</field>
+	     </record> 
+		 
+        <record id="dashbord_critereclient_tree" model="ir.ui.view">
+	         <field name="name">dashbord.critereclient.tree</field>
+             <field name="model">dashbord.critereclient</field>
+             <field name="arch" type="xml">
+	         <tree string="dashbords">
+							<field name="kanban" />
+
+                </tree>
+			</field>
+	     </record>
+		 <record id="dashbord_critereclient_search" model="ir.ui.view">
+	         <field name="name">dashbord.critereclient.search</field>
+             <field name="model">dashbord.critereclient</field>
+             <field name="arch" type="xml">
+	         <tree string="dashbords">
+							<field name="kanban"/>
+                </tree>
+			</field>
+	     </record>
+
+ <record model="ir.actions.act_window" id="action_dashbord_critereclient">
+      <field name="name">CRITERES DASHBORD CLIENTS</field>
+      <field name="type">ir.actions.act_window</field>
+      <field name="res_model">dashbord.critereclient</field>
+      <field name="view_mode">tree,form</field>
+      <field name="view_id" ref="dashbord_critereclient_tree"/>
+      <field name="help" type="html">
+        <p class="oe_view_nocontent_create">
+          Cliquer ici pour composer des criteres
+        </p>
+      </field>
+    </record>
+
+		 <record id="view_pressing_client_form" model="ir.ui.view">
+            <field name="name">Partner.ext</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//page[3]" position="after">
+                <page string="FACTURES">
+                  <group>
+                    <group>
+                       <field name="nbjretard"/>  
+                       <field name="montantdu"/>
+                    </group>
+                  </group> 
+                </page>
+                </xpath>
+            </field>
+        </record> 
+     <record id="dashbord_client_kanban" model="ir.ui.view">
+        <field name="name">dashbord.client.kanban</field>
+        <field name="model">dashbord.client</field>
+        <field name="arch" type="xml">
+            <kanban default_group_by="dashstate" class="o_kanban_small_column" edit="false" create="false" quick_create="false">
+                <field name="id"/>
+                <field name="dashstate"/>
+                <progressbar field="dashstate" colors='{"termine": "success", "encours": "warning", "afaire": "danger"}'/>
+                <templates>
+                    <t t-name="kanban-box">
+                        <div class="oe_kanban_global_click">
+                            <div class="oe_kanban_details">
+                                <strong class="o_kanban_record_title">
+                                    <field name="partner_id"/>
+                                </strong>
+                                <div name="tags"/>
+                                <ul>
+                                    <li>Frequence: <field name="nbcommande"></field> / Retard: <field name="nbjretard"></field></li>
+                                    <li>Montant dû: <field name="montantdu"></field></li>
+                                </ul>
+                                <div name="tags"/>
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+		 	<record id="dashbord_client_form" model="ir.ui.view">
+	         <field name="name">dashbord.client.form</field>
+             <field name="model">dashbord.client</field>
+             <field name="arch" type="xml">
+	         <form string="dashbords">
+                      <sheet>
+                      <group>
+                        <group>
+							<field name="partner_id" />
+							<field name="phone" />
+							<field name="email" />
+							<field name="nbcommande" />
+							<field name="nbjretard" />
+							<field name="montantdu" />
+							<field name="dashstate" />
+                        </group>
+                      </group>
+
+                    </sheet>
+                </form>
+			</field>
+	     </record> 
+		 
+        <record id="dashbord_client_tree" model="ir.ui.view">
+	         <field name="name">dashbord.client.tree</field>
+             <field name="model">dashbord.client</field>
+             <field name="arch" type="xml">
+	         <tree string="dashbords">
+							<field name="partner_id" />
+							<field name="phone" />
+							<field name="email" />
+							<field name="nbcommande" />
+							<field name="nbjretard" />
+							<field name="montantdu" />
+							<field name="dashstate" />
+
+                </tree>
+			</field>
+	     </record>
+	            <record id="dashbord_client_pivot" model="ir.ui.view">
+	         <field name="name">dashbord.client.pivot</field>
+             <field name="model">dashbord.client</field>
+             <field name="arch" type="xml">
+	         <pivot string="dashbords">
+							<field name="partner_id" type="row" />
+							<field name="nbjretard" type="measure" />
+			                <field name="montantdu" type="measure"/>
+							<field name="nbcommande" type="measure" />
+
+
+                </pivot>
+			</field>
+	     </record>
+		 <record id="dashbord_client_search" model="ir.ui.view">
+	         <field name="name">dashbord.client.search</field>
+             <field name="model">dashbord.client</field>
+             <field name="arch" type="xml">
+	         <search string="dashbords">
+							<field name="name"/>
+                </search>
+			</field>
+	     </record>
+
+ <record model="ir.actions.act_window" id="action_dashbordclient_cretnvp">
+      <field name="name">CLIENTS A RETENIR - NE VIENNENT PLUS</field>
+      <field name="type">ir.actions.act_window</field>
+      <field name="res_model">dashbord.client</field>
+      <field name="view_mode">kanban,form,pivot</field>
+      <field name="view_id" ref="hsn_dashbord.dashbord_client_kanban"/>
+      <field name="domain">[('kanban','=','cretnvp')]</field>
+      <field name="help" type="html">
+        <p class="oe_view_nocontent_create">
+          Cliquer ici pour ajouter un client
+        </p>
+      </field>
+    </record>
+ <record model="ir.actions.act_window" id="action_dashbordclient_cretvp">
+      <field name="name">CLIENTS A RETENIR - VIENNENT PEU</field>
+      <field name="type">ir.actions.act_window</field>
+      <field name="res_model">dashbord.client</field>
+      <field name="view_mode">kanban,form,pivot</field>
+      <field name="view_id" ref="hsn_dashbord.dashbord_client_kanban"/>
+      <field name="domain">[('kanban','=','cretvp')]</field>
+      <field name="help" type="html">
+        <p class="oe_view_nocontent_create">
+          Cliquer ici pour ajouter un client
+        </p>
+      </field>
+    </record>
+ <record model="ir.actions.act_window" id="action_dashbordclient_cap">
+      <field name="name">CLIENTS ACHETANT PEU - VOIR PROBLEME</field>
+      <field name="type">ir.actions.act_window</field>
+      <field name="res_model">dashbord.client</field>
+      <field name="view_mode">kanban,form,pivot</field>
+      <field name="view_id" ref="hsn_dashbord.dashbord_client_kanban"/>
+      <field name="domain">[('kanban','=','cap')]</field>
+      <field name="help" type="html">
+        <p class="oe_view_nocontent_create">
+          Cliquer ici pour ajouter un client
+        </p>
+      </field>
+    </record>
+ <record model="ir.actions.act_window" id="action_dashbordclient_caffq">
+      <field name="name">CLIENTS A FIDELISER - FREQUENT</field>
+      <field name="type">ir.actions.act_window</field>
+      <field name="res_model">dashbord.client</field>
+      <field name="view_mode">kanban,form,pivot</field>
+      <field name="view_id" ref="hsn_dashbord.dashbord_client_kanban"/>
+      <field name="domain">[('kanban','=','caffq')]</field>
+      <field name="help" type="html">
+        <p class="oe_view_nocontent_create">
+          Cliquer ici pour ajouter un client
+        </p>
+      </field>
+    </record>
+ <record model="ir.actions.act_window" id="action_dashbordclient_cafgc">
+      <field name="name">CLIENTS A FIDELISER - GROS CLIENTS</field>
+      <field name="type">ir.actions.act_window</field>
+      <field name="res_model">dashbord.client</field>
+      <field name="view_mode">kanban,form,pivot</field>
+      <field name="view_id" ref="hsn_dashbord.dashbord_client_kanban"/>
+      <field name="domain">[('kanban','=','cafgc')]</field>
+      <field name="help" type="html">
+        <p class="oe_view_nocontent_create">
+          Cliquer ici pour ajouter un client
+        </p>
+      </field>
+    </record>
+ <record model="ir.actions.act_window" id="action_dashbordclient_caspm">
+      <field name="name">CLIENTS A SURVEILLER - PAIENT MAL</field>
+      <field name="type">ir.actions.act_window</field>
+      <field name="res_model">dashbord.client</field>
+      <field name="view_mode">kanban,form,pivot</field>
+      <field name="view_id" ref="hsn_dashbord.dashbord_client_kanban"/>
+      <field name="domain">[('kanban','=','caspm')]</field>
+      <field name="help" type="html">
+        <p class="oe_view_nocontent_create">
+          Cliquer ici pour ajouter un client
+        </p>
+      </field>
+    </record>
+ <record model="ir.actions.act_window" id="action_dashbordclient_cab">
+      <field name="name">CLIENTS A BLOQUER</field>
+      <field name="type">ir.actions.act_window</field>
+      <field name="res_model">dashbord.client</field>
+      <field name="view_mode">kanban,form,pivot</field>
+      <field name="view_id" ref="hsn_dashbord.dashbord_client_kanban"/>
+      <field name="domain">[('kanban','=','cab')]</field>
+      <field name="help" type="html">
+        <p class="oe_view_nocontent_create">
+          Cliquer ici pour ajouter un client
+        </p>
+      </field>
+    </record>
+
+	    </data>
+</odoo>

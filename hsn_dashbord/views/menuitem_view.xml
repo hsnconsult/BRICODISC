@@ -3,6 +3,11 @@
     <data>
 <!-- Menus  -->
     <menuitem id="hsndashbord" name="TABLEAUX DE BORD BRICO" sequence="150" web_icon="hsn_dashbord,static/description/tbord.png"/>
+
+	<menuitem id="hsndashbord_critere" name="Tableau de critères" parent="hsndashbord"  sequence="15"/>
+	<menuitem id="hsndashbord_critere_stock" name="STOCKS" parent="hsndashbord_critere"  sequence="10" action="action_dashbord_critere"/>
+    <menuitem id="hsndashbord_critere_client" name="CLIENTS" parent="hsndashbord_critere"  sequence="20" action="action_dashbord_critereclient"/>
+
 	<menuitem id="hsndashbord_stock" name="STOCKS" parent="hsndashbord" sequence="20"/>
 	<menuitem id="hsndashbord_stock_solde" name="PRODUITS A SOLDER" parent="hsndashbord_stock"  sequence="10"/>
 	<menuitem id="hsndashbord_stock_solde_psolde20" name="Produits à solder - 20%" parent="hsndashbord_stock_solde"  sequence="10" action="action_dashbord_psolde20"/>
@@ -24,7 +29,15 @@
     <menuitem id="hsndashbord_stock_pnrup_pnrup2" name="Produits interdit de rupture - Priorité 2" parent="hsndashbord_stock_pnrup"  sequence="20" action="action_dashbord_pnrup2"/>
     <menuitem id="hsndashbord_stock_pnrup_pnrup3" name="Produits interdit de rupture - Priorité 3" parent="hsndashbord_stock_pnrup"  sequence="30" action="action_dashbord_pnrup3"/>
 
-	<menuitem id="hsndashbord_critere" name="Tableau de critères" parent="hsndashbord"  sequence="15"/>
-	<menuitem id="hsndashbord_critere_stock" name="STOCKS" parent="hsndashbord_critere"  sequence="10" action="action_dashbord_critere"/>
+	<menuitem id="hsndashbord_client" name="CLIENTS" parent="hsndashbord" sequence="30"/>
+	<menuitem id="hsndashbord_client_cretnvp" name="CLIENTS A RETENIR - NE VIENNENT PLUS" parent="hsndashbord_client"  sequence="10" action="action_dashbordclient_cretnvp"/>
+	<menuitem id="hsndashbord_client_cretvp" name="CLIENTS A RETENIR - VIENNENT PEU" parent="hsndashbord_client"  sequence="20" action="action_dashbordclient_cretvp"/>
+	<menuitem id="hsndashbord_client_cap" name="CLIENTS ACHETANT PEU - VOIR PROBLEME" parent="hsndashbord_client"  sequence="30" action="action_dashbordclient_cap"/>
+	<menuitem id="hsndashbord_client_caffq" name="CLIENTS A FIDELISER - FREQUENT" parent="hsndashbord_client"  sequence="40" action="action_dashbordclient_caffq"/>
+	<menuitem id="hsndashbord_client_cafgc" name="CLIENTS A FIDELISER - GROS CLIENTS" parent="hsndashbord_client"  sequence="50" action="action_dashbordclient_cafgc"/>
+	<menuitem id="hsndashbord_client_caspm" name="CLIENTS A SURVEILLER - PAIENT MAL" parent="hsndashbord_client"  sequence="60" action="action_dashbordclient_caspm"/>
+	<menuitem id="hsndashbord_client_cab" name="CLIENTS A BLOQUER" parent="hsndashbord_client"  sequence="70" action="action_dashbordclient_cab"/>
+
+
 	    </data>
 </odoo>

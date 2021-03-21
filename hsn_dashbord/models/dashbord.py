@@ -270,7 +270,7 @@ class CritereDash(models.Model):
                   dashprod.create(vals)
         
         #self.write({'state':'valide'})
-    kanban = fields.Many2one('dashbord.kanban','Kanban')
+    kanban = fields.Many2one('dashbord.kanban','Kanban', domain="[('type','=','STOCK')]")
     date = fields.Date('Date d\'Application')
     qtevendue = fields.Float('Quantité vendue', digits=(16,0))
     opqtevendue = fields.Selection([('<','Inférieure'),('<=','Inférieure ou égale'),('=','Egale'),('>','Supérieure'),('>=','Supérieure ou égale')], 'Op qtevendue')

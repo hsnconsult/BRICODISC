@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <data>
+<!-- KANBANS STOCK -->
         <record id="dash_kanban_psolde20" model="dashbord.kanban">
             <field name="code">psolde20</field>
             <field name="name">PRODUITS A SOLDER - 20%</field>
@@ -70,6 +71,44 @@
             <field name="code">pnrup3</field>
             <field name="name">PRODUITS INTERDIT DE RUPTURE - PRIORITE 3</field>
             <field name="type">STOCK</field>
+        </record>
+
+<!-- KANBANS CLIENTS -->
+
+        <record id="dash_kanban_cretnvp" model="dashbord.kanban">
+            <field name="code">cretnvp</field>
+            <field name="name">CLIENTS A RETENIR - NE VIENNENT PLUS</field>
+            <field name="type">CLIENT</field>
+        </record>
+        <record id="dash_kanban_cretvp" model="dashbord.kanban">
+            <field name="code">cretvp</field>
+            <field name="name">CLIENTS A RETENIR - VIENNENT PEU</field>
+            <field name="type">CLIENT</field>
+        </record>
+        <record id="dash_kanban_cap" model="dashbord.kanban">
+            <field name="code">cap</field>
+            <field name="name">CLIENTS ACHETANT PEU - VOIR PROBLEME</field>
+            <field name="type">CLIENT</field>
+        </record>
+        <record id="dash_kanban_caffq" model="dashbord.kanban">
+            <field name="code">caffq</field>
+            <field name="name">CLIENTS A FIDELISER - FREQUENT</field>
+            <field name="type">CLIENT</field>
+        </record>
+        <record id="dash_kanban_cafgc" model="dashbord.kanban">
+            <field name="code">cafgc</field>
+            <field name="name">CLIENTS A FIDELISER - GROS CLIENTS</field>
+            <field name="type">CLIENT</field>
+        </record>
+        <record id="dash_kanban_caspm" model="dashbord.kanban">
+            <field name="code">caspm</field>
+            <field name="name">CLIENTS A SURVEILLER - PAIENT MAL</field>
+            <field name="type">CLIENT</field>
+        </record>
+        <record id="dash_kanban_cab" model="dashbord.kanban">
+            <field name="code">cab</field>
+            <field name="name">CLIENTS A BLOQUER</field>
+            <field name="type">CLIENT</field>
         </record>
 
     </data>
