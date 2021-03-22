@@ -2,6 +2,7 @@
 import time
 import math
 import datetime
+from datetime import timedelta
 from odoo.osv import expression
 from odoo.tools.float_utils import float_round as round
 from odoo.tools import DEFAULT_SERVER_DATETIME_FORMAT
@@ -70,25 +71,48 @@ class CritereDashClient(models.Model):
                 req2_cli_ids.append(res['partner_id'])
                 
         #Critere Frequence
+        #if self.afrequence:
+        #    requete3 = self.env['res.partner'].search([])  
+        #    for res in requete3:
+        #        nbcommande = res.sale_order_count + res.pos_order_count
+        #        if self.opfrequence == '<':
+        #            if nbcommande < self.frequence:
+        #                req3_cli_ids.append(res.id)
+        #        if self.opfrequence == '<=':
+        #            if nbcommande <= self.frequence:
+        #                req3_cli_ids.append(res.id)
+        #        if self.opfrequence == '>':
+        #            if nbcommande > self.frequence:
+        #                req3_cli_ids.append(res.id) 
+        #        if self.opfrequence == '>=':
+        #            if nbcommande >= self.frequence:
+        #                req3_cli_ids.append(res.id) 
+        #        if self.opfrequence == '=':
+        #            if nbcommande == self.frequence:
+        #                req3_cli_ids.append(res.id)
+        #Critere Frequence
         if self.afrequence:
-            requete3 = self.env['res.partner'].search([])  
-            for res in requete3:
-                nbcommande = res.sale_order_count + res.pos_order_count
-                if self.opfrequence == '<':
+           requete3 = self.env['res.partner'].search([])
+           for res in requete3:
+               nbcommande = res.get_frequence(datetime.date.today() - timedelta(days=self.intfrequence), datetime.date.today()) 
+               nbcommandetot = res.sale_order_count + res.pos_order_count
+               if nbcommandetot!=0:
+                  #raise UserError(nbcommande)
+                  if self.opfrequence == '<':
                     if nbcommande < self.frequence:
                         req3_cli_ids.append(res.id) 
-                if self.opfrequence == '<=':
+                  if self.opfrequence == '<=':
                     if nbcommande <= self.frequence:
                         req3_cli_ids.append(res.id)
-                if self.opfrequence == '>':
+                  if self.opfrequence == '>':
                     if nbcommande > self.frequence:
                         req3_cli_ids.append(res.id) 
-                if self.opfrequence == '>=':
+                  if self.opfrequence == '>=':
                     if nbcommande >= self.frequence:
                         req3_cli_ids.append(res.id) 
-                if self.opfrequence == '=':
+                  if self.opfrequence == '=':
                     if nbcommande == self.frequence:
-                        req3_cli_ids.append(res.id)
+                        req3_cli_ids.append(res.id) 
                         
         #Critere Retard
         #if self.aretard:
@@ -241,6 +265,12 @@ class Partner(models.Model):
             montantdu = 0            
             for facture in factures:
                 montantdu = montantdu + facture.amount_residual
-        return montantdu         
+        return montantdu
+    def get_frequence(self,debut,fin):
+        nbcomcl = self.env['sale.order'].search_count([('state','in',('done','sale')),('partner_id','=',self.id),('date_order','>=',debut),('date_order','<=',fin)]) 
+        nbcompos = self.env['pos.order'].search_count([('state','in',('paid','done','invoiced')),('partner_id','=',self.id),('date_order','>=',debut),('date_order','<=',fin)])   
+        nbcom = nbcomcl + nbcompos
+        return nbcom 
+   
     nbjretard = fields.Integer('Jours de retard', compute='get_infoscli')
     montantdu = fields.Float('Montant dû', compute='get_infoscli')
