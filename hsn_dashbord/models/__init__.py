@@ -11,3 +11,4 @@
 
 from . import dashbord
 from . import dashbordcli
+from . import dashbordquali

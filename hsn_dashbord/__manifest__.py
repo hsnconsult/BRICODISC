@@ -16,6 +16,7 @@
     'data': [
         'views/dashbord_view.xml',
         'views/dashbordcli_view.xml',
+        'views/dashbordquali_view.xml',
         'views/menuitem_view.xml',
         'data/dash_data.xml',
     ],
