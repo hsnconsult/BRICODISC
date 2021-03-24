@@ -4,7 +4,7 @@
         <!-- QWeb Reports -->
         <report 
             id="report_lp"
-            model="product.pricelist"
+            model="res.partner"
             string="Liste de prix"
             report_type="qweb-pdf"
             name="hsn_prix.report_listp"

@@ -1,33 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
+    <data>
+        <template id="report_listp_detail">
+            <t t-call="web.external_layout">
+                <t t-set="o" t-value="o.with_context(lang=lang)" />
+                <t t-set="address">
+                    <address t-esc="o" t-options='{"widget": "contact", "fields": ["address", "name"], "no_marker": True}' />
+                    <div t-if="o.vat" class="mt16">
+                        Tax ID: <span t-field="o.vat"/>
+                     </div>
+                </t>
+                <div class="page">
+                    <h2>
+                        <span>Votre liste de prix: </span>
+                        <span t-field="o.property_product_pricelist.name"/>
+                    </h2>
 
-<template id="minimal_layout_inherit" inherit_id="web.minimal_layout">
-		<xpath expr="//head" position="inside">
-			<link rel='stylesheet' href="/hsn_prix/static/src/css/prix.css"/>
-		</xpath>
-</template>
-<template id="report_listp">
-    <t t-call="web.html_container">
-        <t t-set="data_report_margin_top" t-value="12"/>
-        <t t-set="data_report_margin_left" t-value="12"/>
-        <t t-set="data_report_header_spacing" t-value="9"/>
-        <t t-set="data_report_dpi" t-value="110"/>
-        <t t-foreach="docs" t-as="o">
-            <t t-call="web.basic_layout">
-    <div class="header text-left haut">
-             <img src= "/hsn_prix/static/src/img/entete.png" width="80%"/>
-			</div> 
-                <div class="page" style="font-family:Arial, Helvetica, sans-serif; margin-top:30px">
-					<div class="tiu">
-						 <strong>LISTE DE PRIX <span t-esc="o.name"/> </strong>
-                    </div> 
-              </div>
-    <div class="footer text-center pied">
-            BRICO DISCOUNT<br/>
-    </div>
-        </t>
-        </t>
-    </t>
-</template>
+                    <table class="table table-sm o_main_table" name="invoice_line_table">
+                        <thead>
+                            <tr>
+                                <t t-set="colspan" t-value="6"/>
+                                <th name="th_description" class="text-left"><span>Description</span></th>
+                                <th name="th_quantity" class="text-right"><span>Prix public</span></th>
+                                <th name="th_quantity" class="text-right"><span>Remise(%)</span></th>
+                                <th name="th_quantity" class="text-right"><span>Votre prix</span></th>
+                            </tr>
+                        </thead>
+                        <tbody class="invoice_tbody">
+                            <t t-foreach="o.property_product_pricelist.item_ids.sorted(key=lambda item: item.applied_on, reverse=True)" t-as="line">
+                                <tr>
+                                  <t t-if="line.applied_on=='1_product'">
+                                        <td><span t-field="line.product_tmpl_id.name"/></td>
+                                        <td class="text-right"><span t-field="line.product_tmpl_id.list_price"/></td>
+                                        <td class="text-right"><span t-field="line.percent_price"/></td>
+                                        <td class="text-right"><span t-esc="'{:,.2f}'.format(line.product_tmpl_id.list_price*(1-line.percent_price/100)).replace(',', ' ').replace('.', ',')"/></td>
+                                 </t>
+                                  <t t-if="line.applied_on!='1_product'">
+                                        <td class="text-right"><span t-field="line.name"/></td>
+                                        <td class="text-right"></td>
+                                        <td class="text-right"><span t-field="line.percent_price"/></td>
+                                        <td class="text-right"></td>
+                                 </t>
+                               </tr>
+                           </t>
+                        </tbody>
+                    </table>
+                </div>
+            </t>
+        </template>
+        <template id="report_listp">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="o">
+                    <t t-set="lang" t-value="o.lang"/>
+                    <t t-call="hsn_prix.report_listp_detail" t-lang="lang"/>
+                </t>
+            </t>
+        </template>
+    </data>
 </odoo>
 
