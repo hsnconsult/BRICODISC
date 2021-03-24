@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+<data noupdate="0">
+        <record model="ir.module.category" id="module_prix_category">
+            <field name="name">PRIX</field>
+            <field name="description">Catégorie prix</field>
+            <field name="sequence">17</field>
+        </record>
+        <record id="group_prix_gerant" model="res.groups">
+            <field name="name">Gérant</field>
+            <field name="category_id" ref="module_prix_category"/>
+        </record>
+		<record id="group_prix_consultant" model="res.groups">
+            <field name="name">Consultant</field>
+            <field name="category_id" ref="module_prix_category"/>
+        </record>
+</data>
+</openerp>

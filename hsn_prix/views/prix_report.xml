@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- QWeb Reports -->
+        <report 
+            id="report_lp"
+            model="product.pricelist"
+            string="Liste de prix"
+            report_type="qweb-pdf"
+            name="hsn_prix.report_listp"
+            file="hsn_prix.report_listp"
+            />
+    </data>
+</odoo>

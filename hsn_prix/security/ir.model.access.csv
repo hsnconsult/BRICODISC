@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_prix_criteremarge_gerant,prix.criteremarge.gerant,model_prix_criteremarge,group_prix_gerant,1,1,1,1
+access_prix_criteremarge_consultant,prix.criteremarge.consultant,model_prix_criteremarge,group_prix_consultant,1,0,0,0

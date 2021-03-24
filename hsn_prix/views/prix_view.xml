@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>	 
+		 <record id="view_dashbord_prix_form" model="ir.ui.view">
+            <field name="name">Pricelist.ext</field>
+            <field name="model">product.pricelist</field>
+            <field name="inherit_id" ref="product.product_pricelist_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//page[2]" position="after">
+                    <page name="criteres_marges" string="Critères de marge">
+                              <field name="critere_ids" nolabel="1" widget="one2many_list" mode="tree">
+                                  <tree string="Critere marge" editable="bottom">
+                                      <field name="margemin" attrs="{'readonly': [('state', '!=', 'brouillon')]}"/>
+                                      <field name="margemax" attrs="{'readonly': [('state', '!=', 'brouillon')]}"/>
+                                      <field name="taux" attrs="{'readonly': [('state', '!=', 'brouillon')]}"/>
+                                      <field name="state"/>
+                                      <button name="valider" string="Valider" type="object" class="btn-primary" attrs="{'invisible': [('state', '!=', 'brouillon')]}"/>
+                                  </tree>
+                              </field>
+                            </page>
+                </xpath>
+            </field>
+        </record> 
+	    </data>
+</odoo>
